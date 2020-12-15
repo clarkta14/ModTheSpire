@@ -5,6 +5,6 @@
 },
         "testMod:BottledLightning": {
                 "NAME": "Bottled Lightning",
-                "DESCRIPTIONS": ["Deal ", " damage to a random enemy."]
+                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage+2. NL #bCap: +10"]
         }
 }

@@ -6,5 +6,9 @@
 "testMod:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"testMod:CauldronPower": {
+        "NAME": "Cauldron",
+        "DESCRIPTIONS": ["At the start of your turn, #bupgrade a random #yPotion.", " Reduce by 1. ", " Repeat ", " times."]
 }
 }
