@@ -24,10 +24,7 @@ import testMod.cards.*;
 import testMod.characters.TheDefault;
 import testMod.events.IdentityCrisisEvent;
 import testMod.potions.PlaceholderPotion;
-import testMod.relics.BottledPlaceholderRelic;
-import testMod.relics.DefaultClickableRelic;
-import testMod.relics.PlaceholderRelic;
-import testMod.relics.PlaceholderRelic2;
+import testMod.relics.*;
 import testMod.util.IDCheckDontTouchPls;
 import testMod.util.TextureLoader;
 import testMod.variables.DefaultCustomVariable;
@@ -395,6 +392,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new StimPack(), TheDefault.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

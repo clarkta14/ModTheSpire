@@ -30,5 +30,13 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "testMod:StimPack": {
+    "NAME": "Stim Pack",
+    "FLAVOR": "U wanna see some real speed?",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]combat.[] NL Gain #b2 [E] .",
+      "FASTER!!"
+    ]
   }
 }
