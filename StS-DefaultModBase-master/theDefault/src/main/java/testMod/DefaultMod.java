@@ -23,6 +23,7 @@ import org.apache.logging.log4j.Logger;
 import testMod.cards.*;
 import testMod.characters.TheDefault;
 import testMod.events.IdentityCrisisEvent;
+import testMod.potions.BottledLightning;
 import testMod.potions.PlaceholderPotion;
 import testMod.relics.*;
 import testMod.util.IDCheckDontTouchPls;
@@ -368,7 +369,8 @@ public class DefaultMod implements
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        
+        BaseMod.addPotion(BottledLightning.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+
         logger.info("Done editing potions");
     }
     
@@ -393,6 +395,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new StimPack(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new GrabBag(), TheDefault.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

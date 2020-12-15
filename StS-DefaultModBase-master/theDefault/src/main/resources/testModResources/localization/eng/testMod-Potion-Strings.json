@@ -2,5 +2,9 @@
 "testMod:PlaceholderPotion": {
         "NAME": "Placeholder Potion",
         "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
-}
+},
+        "testMod:BottledLightning": {
+                "NAME": "Bottled Lightning",
+                "DESCRIPTIONS": ["Deal ", " damage to a random enemy."]
+        }
 }

@@ -38,5 +38,12 @@
       "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]combat.[] NL Gain #b2 [E] .",
       "FASTER!!"
     ]
+  },
+  "testMod:GrabBag": {
+    "NAME": "Grab Bag",
+    "FLAVOR": "A bag from which you grab. Results may #bvary.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]combat.[] NL Gain a potion (BottledLightning)."
+    ]
   }
 }
