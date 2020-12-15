@@ -78,7 +78,7 @@ public class GrabBag extends CustomRelic implements ClickableRelic { // You must
     public void atTurnStart() {
 //        usedThisTurn = false;  // Resets the used this turn. You can remove this to use a relic only once per combat rather than per turn.
         isPlayerTurn = true; // It's our turn!
-        if(usedThisCombat) {
+        if(!usedThisCombat) {
             beginLongPulse(); // Pulse while the player can click on it.
         }
     }
