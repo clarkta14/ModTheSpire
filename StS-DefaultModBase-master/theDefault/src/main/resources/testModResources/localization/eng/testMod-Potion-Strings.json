@@ -18,5 +18,9 @@
         "testMod:AncientPotionUpgradable": {
                 "NAME": "Ancient Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Artifact #rper #r2 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:AttackPotionUpgradable": {
+                "NAME": "Attack Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Options are Upgraded. NL #bMax #bLevel: +"]
         }
 }
