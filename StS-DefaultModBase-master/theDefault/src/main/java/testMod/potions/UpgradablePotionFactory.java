@@ -32,11 +32,13 @@ public class UpgradablePotionFactory {
     public static AbstractPotion makeRandomUpgradablePotion() {
         Random random = new Random();
         //TODO: the hardcoded number here should be equal to the number of upgradable potions. Perhaps that can be calculated.
-        switch (random.nextInt(2)) {
+        switch (random.nextInt(3)) {
             case 0:
                 return new FirePotionUpgradable();
             case 1:
                 return new BottledLightning();
+            case 2:
+                return new AmbrosiaUpgradable();
             default: {
                 logger.info("UpgradeablePotionFactory> Default case of makeRandomUpgradablePotion. Reduce random range.");
                 return null;
