@@ -42,7 +42,7 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     public void use(AbstractCreature target) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, potency), AbstractGameAction.AttackEffect.LIGHTNING));
+                    new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, getPotency()), AbstractGameAction.AttackEffect.LIGHTNING));
         }
     }
 
