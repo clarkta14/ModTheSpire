@@ -15,6 +15,7 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     public static final String NAME = oldPotionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
     private int potionLevel = 0;
+    private int maxPotionLevel = 20;
 
     public AmbrosiaUpgradable() {
         super();
@@ -23,7 +24,7 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     @Override
     public void use(AbstractCreature target) {
         super.use(target);
-        if(getPotionLevel() >= 20) {
+        if(getPotionLevel() >= maxPotionLevel) {
             //TODO: enter Divinity again next turn
         }
     }
@@ -50,7 +51,7 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
 
     @Override
     public boolean canUpgradePotion() {
-        if(getPotionLevel() < 20) {
+        if(getPotionLevel() < maxPotionLevel) {
             return true;
         }
         return false;
@@ -68,6 +69,8 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
         if(getPotionLevel() > 0) {
             this.tips.get(0).header += "+" + getPotionLevel();
         }
+
+        //TODO: Perhaps add a CAP or MAX to the name when it is maxed out
 
         //the base game does this upon initializeData()... but I do not know where.
         //this.tips.get(0).body = "#pTestMod NL " + this.tips.get(0).body;

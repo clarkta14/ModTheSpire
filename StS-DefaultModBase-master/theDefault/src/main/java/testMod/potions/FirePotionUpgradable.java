@@ -18,7 +18,9 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
 
     public static final String NAME = oldPotionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
+
     private int potionLevel = 0;
+    private int maxPotionLevel = 5;
 
     public FirePotionUpgradable() {
         super();
@@ -50,7 +52,7 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
 
     @Override
     public boolean canUpgradePotion() {
-        if(getPotionLevel() < 5) {
+        if(getPotionLevel() < maxPotionLevel) {
             return true;
         }
         return false;
