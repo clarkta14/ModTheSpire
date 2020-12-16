@@ -24,7 +24,7 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     private int potionLevel = 0;
-    private int maxPotionLevel = 10;
+    private static int maxPotionLevel = 10;
 
     public BottledLightning() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
@@ -34,7 +34,7 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
         isThrown = false;
 
         // Initialize the on-hover name + description
-        description = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
         tips.add(new PowerTip(name, description));
     }
 
@@ -70,7 +70,7 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
 
     @Override
     public void updatePowerTip() {
-        description = "#pTestMod NL " + DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1];
+        description = "#pTestMod NL " + DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
 
         //upgrade level updates before the name.
         //TODO: Use a contains +, in case in the future you can upgrade multiple times at once.

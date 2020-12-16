@@ -20,7 +20,7 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     private int potionLevel = 0;
-    private int maxPotionLevel = 5;
+    private static int maxPotionLevel = 5;
 
     public FirePotionUpgradable() {
         super();
@@ -37,7 +37,7 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
     public void initializeData() {
         super.initializeData();
         // this clears tips and adds the main PowerTip. So we know tips.get(0) is what we want
-        this.tips.get(0).body += potionStrings.DESCRIPTIONS[0];
+        this.tips.get(0).body += potionStrings.DESCRIPTIONS[0] + maxPotionLevel;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
         this.potency = this.getPotency();
         this.description = "#pTestMod NL " + oldPotionStrings.DESCRIPTIONS[0] + this.potency + oldPotionStrings.DESCRIPTIONS[1];
 
-        this.description = this.description + DESCRIPTIONS[0];
+        this.description += DESCRIPTIONS[0] + maxPotionLevel;
         //upgrade level updates before the name.
         if(getPotionLevel() == 1)
             this.name = this.name + "+" + getPotionLevel();

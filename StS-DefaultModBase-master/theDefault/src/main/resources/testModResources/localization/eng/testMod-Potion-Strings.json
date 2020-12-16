@@ -5,18 +5,18 @@
 },
         "testMod:BottledLightning": {
                 "NAME": "Bottled Lightning",
-                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage+2. NL #bMax: +10"]
+                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage+2. NL #bMax #bLevel: +"]
         },
         "testMod:FirePotionUpgradable": {
                 "NAME": "Fire Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: +3 damage. NL #bMax: +5"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +3 damage. NL #bMax #bLevel: +"]
         },
         "testMod:AmbrosiaUpgradable": {
                 "NAME": "Ambrosia",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Enter Divinity next turn. NL #bMax: +20"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Enter Divinity next turn. NL #bMax #bLevel: +"]
         },
         "testMod:AncientPotionUpgradable": {
-                "NAME": "Ambrosia",
+                "NAME": "Ancient Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Artifact #rper #r2 #rlevels. NL #bMax #bLevel: +"]
         }
 }

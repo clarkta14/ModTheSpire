@@ -13,6 +13,7 @@ public class AncientPotionUpgradable extends AncientPotion implements Upgradable
 
     public static final String NAME = oldPotionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
+
     private int potionLevel = 0;
     private static int maxPotionLevel = 8;
 

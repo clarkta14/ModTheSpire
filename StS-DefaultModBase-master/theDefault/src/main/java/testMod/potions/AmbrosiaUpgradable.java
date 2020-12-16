@@ -14,8 +14,9 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
 
     public static final String NAME = oldPotionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
+
     private int potionLevel = 0;
-    private int maxPotionLevel = 20;
+    private static int maxPotionLevel = 20;
 
     public AmbrosiaUpgradable() {
         super();
@@ -36,7 +37,7 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
         super.initializeData();
 
         // initializeData clears tips THEN adds the main PowerTip THEN the Stance PowerTip.
-        this.tips.get(0).body += potionStrings.DESCRIPTIONS[0];
+        this.tips.get(0).body += (potionStrings.DESCRIPTIONS[0] + maxPotionLevel);
     }
 
     @Override
