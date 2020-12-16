@@ -539,9 +539,11 @@ public class DefaultMod implements
         else {
             logger.info(potionName + " instanceof UpgradablePotion: False");
             logger.info("Replace with upgradable version.");
-            if (UpgradablePotionFactory.makeUpgradablePotionFromVanillaSimpleClassName(potionName) != null) {
+
+            AbstractPotion replacementPotion = UpgradablePotionFactory.makeUpgradablePotionFromVanillaSimpleClassName(potionName);
+            if (replacementPotion != null) {
                 AbstractDungeon.player.removePotion(abstractPotion);
-                AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(new FirePotionUpgradable()));
+                AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(replacementPotion));
             }
         }
     }
