@@ -56,6 +56,6 @@
   },
   "testMod:CauldronLight": {
     "NAME": "Cauldron Light",
-    "DESCRIPTION": "Gain 1 testmod:Cauldron."
+    "DESCRIPTION": "Gain 5 testmod:Cauldron."
   }
 }
