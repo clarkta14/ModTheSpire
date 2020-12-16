@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import testMod.DefaultMod;
 import testMod.potions.BottledLightning;
+import testMod.potions.UpgradablePotionFactory;
 import testMod.util.TextureLoader;
 
 import static testMod.DefaultMod.makeRelicOutlinePath;
@@ -68,6 +69,7 @@ public class GrabBag extends CustomRelic implements ClickableRelic { // You must
 
             //TODO: This will give you a random potion from this mod. For now this just gives you the potion to be tested.
             AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(new Ambrosia()));
+            AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(UpgradablePotionFactory.makeRandomUpgradablePotion()));
         }
     }
 
