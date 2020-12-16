@@ -79,6 +79,8 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
             potionToFlash.flash();
         }
 
+        //TODO: perhaps there should be a relic that determines how much cauldron
+        //you can apply. Like max 5. upgrade to max 10 and so on.
         if (this.amount == 0) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         } else {
