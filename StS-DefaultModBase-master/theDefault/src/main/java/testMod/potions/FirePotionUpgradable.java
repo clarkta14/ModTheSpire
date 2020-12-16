@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.potions.FirePotion;
 public class FirePotionUpgradable extends FirePotion implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(FirePotionUpgradable.class.getSimpleName());
 
-    //TODO: make use of the original potionStrings. Previous attempts did not map correctly
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     private static final PotionStrings oldPotionStrings = CardCrawlGame.languagePack.getPotionString("Fire Potion");
 
