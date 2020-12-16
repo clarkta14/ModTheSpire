@@ -10,5 +10,9 @@
         "testMod:FirePotionUpgradable": {
                 "NAME": "Fire Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: Damage+3. NL #bCap: +5"]
+        },
+        "testMod:AmbrosiaUpgradable": {
+                "NAME": "Ambrosia",
+                "DESCRIPTIONS": [" NL #bUpgrade: #rCAP: Enter Divinity next turn. NL #bCap: +20"]
         }
 }

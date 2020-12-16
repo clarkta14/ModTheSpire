@@ -17,6 +17,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> FirePotion upgraded.");
                 return new FirePotionUpgradable();
             }
+            case "Ambrosia": {
+                logger.info("UpgradeablePotionFactory> Ambrosia upgraded.");
+                return new AmbrosiaUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
