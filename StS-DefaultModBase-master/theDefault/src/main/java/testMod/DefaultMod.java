@@ -12,19 +12,21 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import testMod.cards.*;
 import testMod.characters.TheDefault;
 import testMod.events.IdentityCrisisEvent;
-import testMod.potions.BottledLightning;
-import testMod.potions.PlaceholderPotion;
+import testMod.potions.*;
 import testMod.relics.*;
 import testMod.util.IDCheckDontTouchPls;
 import testMod.util.TextureLoader;
@@ -72,7 +74,8 @@ public class DefaultMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        PotionGetSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
@@ -370,6 +373,7 @@ public class DefaultMod implements
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
         BaseMod.addPotion(BottledLightning.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(FirePotionUpgradable.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
 
         logger.info("Done editing potions");
     }
@@ -522,5 +526,23 @@ public class DefaultMod implements
     // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
+    }
+
+    @Override
+    public void receivePotionGet(AbstractPotion abstractPotion) {
+        String potionName = abstractPotion.getClass().getSimpleName();
+
+        logger.info("Got potion: " + potionName);
+
+        if (abstractPotion instanceof UpgradablePotion)
+            logger.info(potionName + " instanceof UpgradablePotion: True");
+        else {
+            logger.info(potionName + " instanceof UpgradablePotion: False");
+            logger.info("Replace with upgradable version.");
+            if (UpgradablePotionFactory.makeUpgradablePotionFromVanillaSimpleClassName(potionName) != null) {
+                AbstractDungeon.player.removePotion(abstractPotion);
+                AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(new FirePotionUpgradable()));
+            }
+        }
     }
 }

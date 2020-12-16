@@ -56,6 +56,9 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     }
 
     // This is your potency.
+    //TODO: this should be where the potency is changed according to the level.
+    //That way you can use getPotency() and have it be correct. Otherwise it will
+    //always be the same regardless of upgrades.
     @Override
     public int getPotency(final int potency) {
         return 20;
@@ -72,7 +75,8 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
         return false;
     }
 
-    private void updatePowerTip() {
+    @Override
+    public void updatePowerTip() {
         description = "#pTestMod NL " + DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
 
         //upgrade level updates before the name.

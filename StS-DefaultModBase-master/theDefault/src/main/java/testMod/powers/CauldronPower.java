@@ -31,7 +31,7 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    private static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
@@ -61,7 +61,7 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
     public void atStartOfTurn() { // At the start of your turn
         ArrayList<AbstractPotion> affectedPotions = new ArrayList<>();
         for(int i = 0; i < amount; i++) {
-            ArrayList<UpgradablePotion> potions = getUpgradablePotions();
+            ArrayList<UpgradablePotion> potions = getUpgradablePotionsOnPlayer();
 
             if (potions.size() == 0) {
                 logger.info("Cauldron trigger: no upgradable potions.");
@@ -86,13 +86,12 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
         }
     }
 
-
-    public ArrayList<UpgradablePotion> getUpgradablePotions() {
+    public ArrayList<UpgradablePotion> getUpgradablePotionsOnPlayer() {
         ArrayList<AbstractPotion> potions = AbstractDungeon.player.potions;
 
         ArrayList<UpgradablePotion> toReturn = new ArrayList<>();
         for(AbstractPotion potion: potions) {
-            if(potion.getClass().getSimpleName().equals("BottledLightning")) {
+            if (potion instanceof UpgradablePotion) {
                 logger.info("Cauldron trigger: " + potion.name + " is an UpgradablePotion");
                 UpgradablePotion bl = (UpgradablePotion) potion;
                 if(bl.canUpgradePotion()) {

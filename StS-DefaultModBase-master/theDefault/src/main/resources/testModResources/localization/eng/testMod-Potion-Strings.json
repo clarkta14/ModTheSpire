@@ -6,5 +6,9 @@
         "testMod:BottledLightning": {
                 "NAME": "Bottled Lightning",
                 "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage+2. NL #bCap: +10"]
+        },
+        "testMod:FirePotionUpgradable": {
+                "NAME": "Fire Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: Damage+3. NL #bCap: +5"]
         }
 }
