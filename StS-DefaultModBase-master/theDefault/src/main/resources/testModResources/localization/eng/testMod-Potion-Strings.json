@@ -7,6 +7,10 @@
                 "NAME": "Bottled Lightning",
                 "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage+2. NL #bMax #bLevel: +"]
         },
+        "testMod:FibonacciPotion": {
+                "NAME": "Fibonacci Potion",
+                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: #r@Level #r= #rdamge. NL damage = next Fib. NL #bMax #bLevel: +"]
+        },
         "testMod:FirePotionUpgradable": {
                 "NAME": "Fire Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +3 damage. NL #bMax #bLevel: +"]
