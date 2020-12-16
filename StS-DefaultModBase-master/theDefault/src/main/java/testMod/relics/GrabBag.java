@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.potions.Ambrosia;
 import com.megacrit.cardcrawl.potions.FirePotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
@@ -66,7 +67,7 @@ public class GrabBag extends CustomRelic implements ClickableRelic { // You must
 //            AbstractDungeon.actionManager.addToBottom(new EvokeOrbAction(1)); // Evoke your rightmost orb
 
             //TODO: This will give you a random potion from this mod. For now this just gives you the potion to be tested.
-            AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(new FirePotion()));
+            AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(new Ambrosia()));
         }
     }
 

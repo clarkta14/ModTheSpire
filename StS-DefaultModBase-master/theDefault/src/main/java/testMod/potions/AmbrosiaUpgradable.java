@@ -30,8 +30,11 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
 
     @Override
     public void initializeData() {
+        // this.name is not reverted by initializeData after an upgrade has been applied.
+        this.name = "Ambrosia";
         super.initializeData();
-        // this clears tips and adds the main PowerTip. So we know tips.get(0) is what we want
+
+        // initializeData clears tips THEN adds the main PowerTip THEN the Stance PowerTip.
         this.tips.get(0).body += potionStrings.DESCRIPTIONS[0];
     }
 
@@ -60,16 +63,16 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
 
     @Override
     public void updatePowerTip() {
-        this.description = "#pTestMod NL " + oldPotionStrings.DESCRIPTIONS[0];
-        this.description += DESCRIPTIONS[0];
+        initializeData();
 
-        //upgrade level updates before the name.
-        //TODO: maybe do a contains '+' here. There may be instances where a potion upgrades many times at once.
-        if(getPotionLevel() == 1)
-            this.name = this.name + "+" + getPotionLevel();
-        else
-            this.name = this.name.split("\\+")[0] + "+" + getPotionLevel();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
+        if(getPotionLevel() > 0) {
+            this.tips.get(0).header += "+" + getPotionLevel();
+        }
+
+        //the base game does this upon initializeData()... but I do not know where.
+        //this.tips.get(0).body = "#pTestMod NL " + this.tips.get(0).body;
+
+        this.name = this.tips.get(0).header;
+        this.description = this.tips.get(0).body;
     }
 }

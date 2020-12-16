@@ -13,6 +13,6 @@
         },
         "testMod:AmbrosiaUpgradable": {
                 "NAME": "Ambrosia",
-                "DESCRIPTIONS": [" NL #bUpgrade: #rCAP: Enter Divinity next turn. NL #bCap: +20"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@CAP Enter Divinity next turn. NL #bCap: +20"]
         }
 }
