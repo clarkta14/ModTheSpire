@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.potions.Ambrosia;
 import com.megacrit.cardcrawl.relics.SacredBark;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -22,31 +23,26 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
+    private int potionLevel = 0;
+    private int maxPotionLevel = 10;
+
     public BottledLightning() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.SMOKE);
-
-        // Potency is the damage/magic number equivalent of potions.
-        potency = getPotency();
 
         // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
 
         // Initialize the on-hover name + description
-        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1];
         tips.add(new PowerTip(name, description));
     }
 
     @Override
     public void use(AbstractCreature target) {
-        target = AbstractDungeon.player;
-        // If you are in combat, gain strength and the "lose strength at the end of your turn" power, equal to the potency of this potion.
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            AbstractDungeon.actionManager.addToBottom( // 2.Damage all enemies
+            AbstractDungeon.actionManager.addToBottom(
                     new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, potency), AbstractGameAction.AttackEffect.LIGHTNING));
-//                    new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(evokeAmount, true, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
-            // The damage matrix is how orb damage all enemies actions have to be assigned. For regular cards that do damage to everyone, check out cleave or whirlwind - they are a bit simpler.
-
         }
     }
 
@@ -56,19 +52,16 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     }
 
     // This is your potency.
-    //TODO: this should be where the potency is changed according to the level.
-    //That way you can use getPotency() and have it be correct. Otherwise it will
-    //always be the same regardless of upgrades.
     @Override
     public int getPotency(final int potency) {
-        return 20;
+        return 20 + (2 * getPotionLevel());
     }
 
     @Override
     public boolean upgradePotion()
     {
         if(canUpgradePotion()) {
-            potency += 2;
+            potionLevel += 1;
             updatePowerTip();
             return true;
         }
@@ -77,9 +70,10 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
 
     @Override
     public void updatePowerTip() {
-        description = "#pTestMod NL " + DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        description = "#pTestMod NL " + DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1];
 
         //upgrade level updates before the name.
+        //TODO: Use a contains +, in case in the future you can upgrade multiple times at once.
         if(getPotionLevel() == 1)
             name = name + "+" + getPotionLevel();
         else
@@ -91,11 +85,11 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
 
     @Override
     public int getPotionLevel() {
-        return (potency - 20) / 2;
+        return potionLevel;
     }
 
     @Override
     public boolean canUpgradePotion() {
-        return getPotionLevel() < 10;
+        return getPotionLevel() < maxPotionLevel;
     }
 }
