@@ -50,5 +50,9 @@
         "testMod:CultistPotionUpgradable": {
                 "NAME": "Cultist Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Ritual #rper #r5 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:CunningPotionUpgradable": {
+                "NAME": "Cunning Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +2 Shiv+. NL #bMax #bLevel: +"]
         }
 }
