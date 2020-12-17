@@ -24,6 +24,7 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
 
     public FirePotionUpgradable() {
         super();
+        initializeData();
     }
 
     @Override

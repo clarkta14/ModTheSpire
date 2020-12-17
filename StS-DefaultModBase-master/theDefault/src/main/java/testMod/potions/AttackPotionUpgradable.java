@@ -28,6 +28,7 @@ public class AttackPotionUpgradable extends AttackPotion implements UpgradablePo
 
     public AttackPotionUpgradable() {
         super();
+        initializeData();
     }
 
     @Override
