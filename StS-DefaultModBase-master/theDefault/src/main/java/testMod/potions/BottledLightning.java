@@ -41,7 +41,7 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
         tips.clear();
         tips.add(new PowerTip());
 
-        this.tips.get(0).header = "Bottled Lightning";
+        this.tips.get(0).header = NAME;
 
         if(getPotionLevel() > 0) {
             if(getPotionLevel() == maxPotionLevel) {

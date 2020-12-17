@@ -40,7 +40,7 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
         tips.clear();
         tips.add(new PowerTip());
 
-        this.tips.get(0).header = "Fibonacci Potion";
+        this.tips.get(0).header = NAME;
 
         if(getPotionLevel() > 0) {
             if(getPotionLevel() == maxPotionLevel) {
