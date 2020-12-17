@@ -22,24 +22,6 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
         initializeData();
     }
 
-    public AmbrosiaUpgradable(int potionLevel) {
-        super();
-
-        int levelToSet = 0;
-        if(potionLevel > maxPotionLevel)
-            levelToSet = maxPotionLevel;
-        else if (potionLevel < 0)
-            levelToSet = 0;
-        else
-            levelToSet = potionLevel;
-
-        while (getPotionLevel() < levelToSet)
-            if(canUpgradePotion())
-                upgradePotion();
-
-        initializeData();
-    }
-
     @Override
     public void use(AbstractCreature target) {
         super.use(target);

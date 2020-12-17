@@ -22,24 +22,6 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
         initializeData();
     }
 
-    public FirePotionUpgradable(int potionLevel) {
-        super();
-
-        int levelToSet = 0;
-        if(potionLevel > maxPotionLevel)
-            levelToSet = maxPotionLevel;
-        else if (potionLevel < 0)
-            levelToSet = 0;
-        else
-            levelToSet = potionLevel;
-
-        while (getPotionLevel() < levelToSet)
-            if(canUpgradePotion())
-                upgradePotion();
-
-        initializeData();
-    }
-
     @Override
     public void use(AbstractCreature target) {
         // The vanilla use of this potion does not update potency before execution.

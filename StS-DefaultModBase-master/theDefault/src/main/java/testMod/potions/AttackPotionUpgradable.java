@@ -14,7 +14,7 @@ public class AttackPotionUpgradable extends AttackPotion implements UpgradablePo
     public static final String POTION_ID = testMod.DefaultMod.makeID(AttackPotionUpgradable.class.getSimpleName());
 
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
-    private static final PotionStrings oldPotionStrings = CardCrawlGame.languagePack.getPotionString("Attack Potion");
+    private static final PotionStrings oldPotionStrings = CardCrawlGame.languagePack.getPotionString("AttackPotion");
 
     public static final String NAME = oldPotionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
@@ -24,24 +24,6 @@ public class AttackPotionUpgradable extends AttackPotion implements UpgradablePo
 
     public AttackPotionUpgradable() {
         super();
-        initializeData();
-    }
-
-    public AttackPotionUpgradable(int potionLevel) {
-        super();
-
-        int levelToSet = 0;
-        if(potionLevel > maxPotionLevel)
-            levelToSet = maxPotionLevel;
-        else if (potionLevel < 0)
-            levelToSet = 0;
-        else
-            levelToSet = potionLevel;
-
-        while (getPotionLevel() < levelToSet)
-            if(canUpgradePotion())
-                upgradePotion();
-
         initializeData();
     }
 
