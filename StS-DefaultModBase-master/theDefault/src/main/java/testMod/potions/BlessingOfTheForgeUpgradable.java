@@ -1,14 +1,9 @@
 package testMod.potions;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.BlessingOfTheForge;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 
 public class BlessingOfTheForgeUpgradable extends BlessingOfTheForge implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(BlessingOfTheForgeUpgradable.class.getSimpleName());
