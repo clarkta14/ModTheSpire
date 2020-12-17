@@ -20,6 +20,7 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
 
     public AmbrosiaUpgradable() {
         super();
+        initializeData();
     }
 
     @Override

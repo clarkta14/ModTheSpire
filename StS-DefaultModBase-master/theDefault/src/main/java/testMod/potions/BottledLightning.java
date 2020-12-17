@@ -32,6 +32,8 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
 
         // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
+
+        initializeData();
     }
 
     @Override

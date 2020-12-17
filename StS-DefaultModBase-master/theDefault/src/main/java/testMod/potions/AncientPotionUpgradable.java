@@ -19,6 +19,7 @@ public class AncientPotionUpgradable extends AncientPotion implements Upgradable
 
     public AncientPotionUpgradable() {
         super();
+        initializeData();
     }
 
     @Override

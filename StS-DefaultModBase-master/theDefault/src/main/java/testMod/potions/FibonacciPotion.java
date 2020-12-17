@@ -31,21 +31,14 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
 
         // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
+
+        initializeData();
     }
 
     @Override
     public void initializeData() {
         tips.clear();
         tips.add(new PowerTip());
-
-        // On creation firstInt is not initialized and the display would be 0... this
-        // method is called somewhere in the base game, and it seems to require
-        // static variables to work correctly at first. I do not understand how that
-        // happens when the method itself is not static. But this fixed it.
-        // firstInt cannot be static because it is required for each potion.
-        if (firstInt == 0) {
-            firstInt = 1;
-        }
 
         this.tips.get(0).header = "Fibonacci Potion";
 
