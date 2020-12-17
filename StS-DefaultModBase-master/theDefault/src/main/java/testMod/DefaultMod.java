@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -539,7 +540,6 @@ public class DefaultMod implements
         String potionName = abstractPotion.getClass().getSimpleName();
 
         logger.info("Got potion: " + potionName);
-
         if (abstractPotion instanceof UpgradablePotion)
             logger.info(potionName + " instanceof UpgradablePotion: True");
         else {
@@ -548,8 +548,14 @@ public class DefaultMod implements
 
             AbstractPotion replacementPotion = UpgradablePotionFactory.makeUpgradablePotionFromVanillaSimpleClassName(potionName);
             if (replacementPotion != null) {
+                //TODO: This technically counts as a player receiving a potion twice.
+                //Mods that affect when a player gets a potion will be affected.
                 AbstractDungeon.player.removePotion(abstractPotion);
-                AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(replacementPotion));
+                if(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+                    AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(replacementPotion));
+                else {
+                    AbstractDungeon.player.obtainPotion(replacementPotion);
+                }
             }
         }
     }
