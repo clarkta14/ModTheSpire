@@ -56,6 +56,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> ColorlessPotionUpgradable created.");
                 return new ColorlessPotionUpgradable();
             }
+            case "CultistPotion": {
+                logger.info("UpgradeablePotionFactory> CultistPotionUpgradable created.");
+                return new CultistPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

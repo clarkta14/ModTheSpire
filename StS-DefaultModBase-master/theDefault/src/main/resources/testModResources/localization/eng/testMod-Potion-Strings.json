@@ -46,5 +46,9 @@
         "testMod:ColorlessPotionUpgradable": {
                 "NAME": "Colorless Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Options are Upgraded. NL #bMax #bLevel: +"]
+        },
+        "testMod:CultistPotionUpgradable": {
+                "NAME": "Cultist Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Ritual #rper #r5 #rlevels. NL #bMax #bLevel: +"]
         }
 }
