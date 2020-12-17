@@ -26,5 +26,9 @@
         "testMod:AttackPotionUpgradable": {
                 "NAME": "Attack Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Options are Upgraded. NL #bMax #bLevel: +"]
+        },
+        "testMod:BlessingOfTheForgeUpgradable": {
+                "NAME": "Blessing of the Forge",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Upgrade ALL your cards for the rest of combat. NL #bMax #bLevel: +"]
         }
 }
