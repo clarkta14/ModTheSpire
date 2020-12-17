@@ -72,12 +72,6 @@ public class BlessingOfTheForgeUpgradable extends BlessingOfTheForge implements 
         return false;
     }
 
-    // This is your potency.
-    @Override
-    public int getPotency(final int ascension) {
-        return 1;
-    }
-
     @Override
     public int getPotionLevel() {
         return potionLevel;
