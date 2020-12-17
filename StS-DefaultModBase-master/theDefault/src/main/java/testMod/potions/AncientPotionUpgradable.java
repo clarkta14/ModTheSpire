@@ -32,7 +32,9 @@ public class AncientPotionUpgradable extends AncientPotion implements Upgradable
         else
             levelToSet = potionLevel;
 
-        while (getPotionLevel() < levelToSet) upgradePotion();
+        while (getPotionLevel() < levelToSet)
+            if(canUpgradePotion())
+                upgradePotion();
 
         initializeData();
     }

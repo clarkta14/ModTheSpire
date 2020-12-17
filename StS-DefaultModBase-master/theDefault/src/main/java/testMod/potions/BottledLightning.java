@@ -45,7 +45,9 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
         else
             levelToSet = potionLevel;
 
-        while (getPotionLevel() < levelToSet) upgradePotion();
+        while (getPotionLevel() < levelToSet)
+            if(canUpgradePotion())
+                upgradePotion();
 
         initializeData();
     }

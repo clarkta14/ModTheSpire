@@ -33,7 +33,9 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
         else
             levelToSet = potionLevel;
 
-        while (getPotionLevel() < levelToSet) upgradePotion();
+        while (getPotionLevel() < levelToSet)
+            if(canUpgradePotion())
+                upgradePotion();
 
         initializeData();
     }
