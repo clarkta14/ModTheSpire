@@ -52,6 +52,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> BottledMiracleUpgradable created.");
                 return new BottledMiracleUpgradable();
             }
+            case "ColorlessPotion": {
+                logger.info("UpgradeablePotionFactory> ColorlessPotionUpgradable created.");
+                return new ColorlessPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
@@ -145,6 +149,22 @@ public class UpgradablePotionFactory {
             case "BlessingOfTheForgeUpgradable": {
                 logger.info("UpgradeablePotionFactory> BlessingOfTheForgeUpgradable created.");
                 return new BlessingOfTheForgeUpgradable();
+            }
+            case "BlockPotionUpgradable": {
+                logger.info("UpgradeablePotionFactory> BlockPotionUpgradable created.");
+                return new BlockPotionUpgradable();
+            }
+            case "BloodPotionUpgradable": {
+                logger.info("UpgradeablePotionFactory> BloodPotionUpgradable created.");
+                return new BloodPotionUpgradable();
+            }
+            case "BottledMiracleUpgradable": {
+                logger.info("UpgradeablePotionFactory> BottledMiracleUpgradable created.");
+                return new BottledMiracleUpgradable();
+            }
+            case "ColorlessPotionUpgradable": {
+                logger.info("UpgradeablePotionFactory> ColorlessPotionUpgradable created.");
+                return new ColorlessPotionUpgradable();
             }
 
 

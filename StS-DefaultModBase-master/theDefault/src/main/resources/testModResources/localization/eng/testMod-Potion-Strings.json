@@ -42,5 +42,9 @@
         "testMod:BottledMiracleUpgradable": {
                 "NAME": "Bottled Miracle",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Miracle. NL #bMax #bLevel: +"]
+        },
+        "testMod:ColorlessPotionUpgradable": {
+                "NAME": "Colorless Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Options are Upgraded. NL #bMax #bLevel: +"]
         }
 }
