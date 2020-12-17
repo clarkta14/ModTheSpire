@@ -58,5 +58,9 @@
         "testMod:DexterityPotionUpgradable": {
                 "NAME": "Dexterity Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Dexterity #rper #r3 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:DistilledChaosPotionUpgradable": {
+                "NAME": "Distilled Chaos",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 card #rper #r10 #rlevels. NL #bMax #bLevel: +"]
         }
 }
