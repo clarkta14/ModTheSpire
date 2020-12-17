@@ -34,7 +34,7 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     @Override
     public void initializeData() {
         // this.name is not reverted by initializeData after an upgrade has been applied.
-        this.name = "Ambrosia";
+        this.name = NAME;
         super.initializeData();
 
         // initializeData clears tips THEN adds the main PowerTip THEN the Stance PowerTip.
