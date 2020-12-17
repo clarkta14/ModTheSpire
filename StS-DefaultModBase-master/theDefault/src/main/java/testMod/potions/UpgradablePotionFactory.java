@@ -48,6 +48,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> BloodPotionUpgradable created.");
                 return new BloodPotionUpgradable();
             }
+            case "BottledMiracle": {
+                logger.info("UpgradeablePotionFactory> BottledMiracleUpgradable created.");
+                return new BottledMiracleUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
@@ -63,7 +67,7 @@ public class UpgradablePotionFactory {
     public static AbstractPotion makeRandomUpgradablePotion() {
         Random random = new Random();
         //TODO: the hardcoded number here should be equal to the number of upgradable potions. Perhaps that can be calculated.
-        switch (random.nextInt(9)) {
+        switch (random.nextInt(10)) {
             case 0:
                 return new FirePotionUpgradable();
             case 1:
@@ -82,6 +86,8 @@ public class UpgradablePotionFactory {
                 return new BlockPotionUpgradable();
             case 8:
                 return new BloodPotionUpgradable();
+            case 9:
+                return new BottledMiracleUpgradable();
             default: {
                 logger.info("UpgradeablePotionFactory> Default case of makeRandomUpgradablePotion. Reduce random range.");
                 return null;

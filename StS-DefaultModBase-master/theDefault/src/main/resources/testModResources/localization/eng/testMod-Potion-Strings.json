@@ -38,5 +38,9 @@
         "testMod:BloodPotionUpgradable": {
                 "NAME": "Blood Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 HP #rper #r3 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:BottledMiracleUpgradable": {
+                "NAME": "Bottled Miracle",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Miracle. NL #bMax #bLevel: +"]
         }
 }
