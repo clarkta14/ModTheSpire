@@ -29,7 +29,7 @@
         },
         "testMod:BlessingOfTheForgeUpgradable": {
                 "NAME": "Blessing of the Forge",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Upgrade ALL your cards for the rest of combat. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Upgrade ENTIRE DECK this combat. NL #bMax #bLevel: +"]
         },
         "testMod:BlockPotionUpgradable": {
                 "NAME": "Block Potion",

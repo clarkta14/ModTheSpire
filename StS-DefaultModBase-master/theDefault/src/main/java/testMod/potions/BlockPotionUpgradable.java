@@ -22,6 +22,22 @@ public class BlockPotionUpgradable extends BlockPotion implements UpgradablePoti
         initializeData();
     }
 
+    public BlockPotionUpgradable(int potionLevel) {
+        super();
+
+        int levelToSet = 0;
+        if(potionLevel > maxPotionLevel)
+            levelToSet = maxPotionLevel;
+        else if (potionLevel < 0)
+            levelToSet = 0;
+        else
+            levelToSet = potionLevel;
+
+        while (getPotionLevel() < levelToSet) upgradePotion();
+
+        initializeData();
+    }
+
     @Override
     public void initializeData() {
         // this.name is not reverted by initializeData after an upgrade has been applied.

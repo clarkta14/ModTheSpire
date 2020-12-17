@@ -35,6 +35,22 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
         initializeData();
     }
 
+    public FibonacciPotion(int potionLevel) {
+        this();
+
+        int levelToSet = 0;
+        if(potionLevel > maxPotionLevel)
+            levelToSet = maxPotionLevel;
+        else if (potionLevel < 0)
+            levelToSet = 0;
+        else
+            levelToSet = potionLevel;
+
+        while (getPotionLevel() < levelToSet) upgradePotion();
+
+        initializeData();
+    }
+
     @Override
     public void initializeData() {
         tips.clear();

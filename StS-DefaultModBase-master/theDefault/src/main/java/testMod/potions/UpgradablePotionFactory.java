@@ -68,4 +68,31 @@ public class UpgradablePotionFactory {
             }
         }
     }
+
+    public static AbstractPotion makeRandomUpgradablePotion(int potionLevel) {
+        Random random = new Random();
+        //TODO: the hardcoded number here should be equal to the number of upgradable potions. Perhaps that can be calculated.
+        switch (random.nextInt(8)) {
+            case 0:
+                return new FirePotionUpgradable(potionLevel);
+            case 1:
+                return new BottledLightning(potionLevel);
+            case 2:
+                return new AmbrosiaUpgradable(potionLevel);
+            case 3:
+                return new AncientPotionUpgradable(potionLevel);
+            case 4:
+                return new AttackPotionUpgradable(potionLevel);
+            case 5:
+                return new FibonacciPotion(potionLevel);
+            case 6:
+                return new BlessingOfTheForgeUpgradable(potionLevel);
+            case 7:
+                return new BlockPotionUpgradable(potionLevel);
+            default: {
+                logger.info("UpgradeablePotionFactory> Default case of makeRandomUpgradablePotion. Reduce random range.");
+                return null;
+            }
+        }
+    }
 }

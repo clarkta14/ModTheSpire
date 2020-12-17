@@ -15,10 +15,26 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     private int potionLevel = 0;
-    private static int maxPotionLevel = 20;
+    private static int maxPotionLevel = 20; //TODO: maybe make this changeable.
 
     public AmbrosiaUpgradable() {
         super();
+        initializeData();
+    }
+
+    public AmbrosiaUpgradable(int potionLevel) {
+        super();
+
+        int levelToSet = 0;
+        if(potionLevel > maxPotionLevel)
+            levelToSet = maxPotionLevel;
+        else if (potionLevel < 0)
+            levelToSet = 0;
+        else
+            levelToSet = potionLevel;
+
+        while (getPotionLevel() < levelToSet) upgradePotion();
+
         initializeData();
     }
 
