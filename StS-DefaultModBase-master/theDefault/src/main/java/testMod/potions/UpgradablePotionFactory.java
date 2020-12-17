@@ -14,21 +14,26 @@ public class UpgradablePotionFactory {
     public static AbstractPotion makeUpgradablePotionFromVanillaSimpleClassName(String potionClassName) {
         switch (potionClassName) {
             case "FirePotion": {
-                logger.info("UpgradeablePotionFactory> FirePotion upgraded.");
+                logger.info("UpgradeablePotionFactory> FirePotionUpgradable created.");
                 return new FirePotionUpgradable();
             }
             case "Ambrosia": {
-                logger.info("UpgradeablePotionFactory> Ambrosia upgraded.");
+                logger.info("UpgradeablePotionFactory> AmbrosiaUpgradable created.");
                 return new AmbrosiaUpgradable();
             }
             case "AncientPotion": {
-                logger.info("UpgradeablePotionFactory> AncientPotion upgraded.");
+                logger.info("UpgradeablePotionFactory> AncientPotionUpgradable created.");
                 return new AncientPotionUpgradable();
             }
             case "AttackPotion": {
-                logger.info("UpgradeablePotionFactory> AttackPotion upgraded.");
+                logger.info("UpgradeablePotionFactory> AttackPotionUpgradable created.");
                 return new AttackPotionUpgradable();
             }
+            case "BlockPotion": {
+                logger.info("UpgradeablePotionFactory> BlockPotionUpgradable created.");
+                return new BlockPotionUpgradable();
+            }
+
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
@@ -40,7 +45,7 @@ public class UpgradablePotionFactory {
     public static AbstractPotion makeRandomUpgradablePotion() {
         Random random = new Random();
         //TODO: the hardcoded number here should be equal to the number of upgradable potions. Perhaps that can be calculated.
-        switch (random.nextInt(7)) {
+        switch (random.nextInt(8)) {
             case 0:
                 return new FirePotionUpgradable();
             case 1:
@@ -55,6 +60,8 @@ public class UpgradablePotionFactory {
                 return new FibonacciPotion();
             case 6:
                 return new BlessingOfTheForgeUpgradable();
+            case 7:
+                return new BlockPotionUpgradable();
             default: {
                 logger.info("UpgradeablePotionFactory> Default case of makeRandomUpgradablePotion. Reduce random range.");
                 return null;
