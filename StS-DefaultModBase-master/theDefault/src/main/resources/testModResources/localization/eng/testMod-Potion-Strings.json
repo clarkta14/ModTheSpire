@@ -54,5 +54,9 @@
         "testMod:CunningPotionUpgradable": {
                 "NAME": "Cunning Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +2 Shiv+. NL #bMax #bLevel: +"]
+        },
+        "testMod:DexterityPotionUpgradable": {
+                "NAME": "Dexterity Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Dexterity #rper #r3 #rlevels. NL #bMax #bLevel: +"]
         }
 }
