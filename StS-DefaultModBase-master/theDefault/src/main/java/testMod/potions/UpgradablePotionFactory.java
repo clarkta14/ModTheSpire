@@ -36,7 +36,7 @@ public class UpgradablePotionFactory {
         }
     }
 
-    //TODO: use for Grab Bag after testing.
+
     public static AbstractPotion makeRandomUpgradablePotion() {
         Random random = new Random();
         //TODO: the hardcoded number here should be equal to the number of upgradable potions. Perhaps that can be calculated.
