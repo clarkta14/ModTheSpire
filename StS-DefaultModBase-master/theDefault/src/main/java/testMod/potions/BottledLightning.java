@@ -32,10 +32,27 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
 
         // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
+    }
 
-        // Initialize the on-hover name + description
-        description = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
-        tips.add(new PowerTip(name, description));
+    @Override
+    public void initializeData() {
+        tips.clear();
+        tips.add(new PowerTip());
+
+        this.tips.get(0).header = "Bottled Lightning";
+
+        if(getPotionLevel() > 0) {
+            if(getPotionLevel() == maxPotionLevel) {
+                this.tips.get(0).header += "+MAX";
+            } else {
+                this.tips.get(0).header += "+" + getPotionLevel();
+            }
+        }
+
+        this.tips.get(0).body = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
+
+        this.name = this.tips.get(0).header;
+        this.description = this.tips.get(0).body;
     }
 
     @Override
@@ -62,25 +79,10 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     {
         if(canUpgradePotion()) {
             potionLevel += 1;
-            updatePowerTip();
+            initializeData();
             return true;
         }
         return false;
-    }
-
-    @Override
-    public void updatePowerTip() {
-        description = "#pTestMod NL " + DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
-
-        //upgrade level updates before the name.
-        //TODO: Use a contains +, in case in the future you can upgrade multiple times at once.
-        if(getPotionLevel() == 1)
-            name = name + "+" + getPotionLevel();
-        else
-            name = name.split("\\+")[0] + "+" + getPotionLevel();
-
-        tips.clear();
-        tips.add(new PowerTip(name, description));
     }
 
     @Override

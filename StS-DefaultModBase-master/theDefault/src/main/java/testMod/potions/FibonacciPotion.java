@@ -31,10 +31,37 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
 
         // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
+    }
 
-        // Initialize the on-hover name + description
-        description = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
-        tips.add(new PowerTip(name, description));
+    @Override
+    public void initializeData() {
+        tips.clear();
+        tips.add(new PowerTip());
+
+        // On creation firstInt is not initialized and the display would be 0... this
+        // method is called somewhere in the base game, and it seems to require
+        // static variables to work correctly at first. I do not understand how that
+        // happens when the method itself is not static. But this fixed it.
+        // firstInt cannot be static because it is required for each potion.
+        if (firstInt == 0) {
+            firstInt = 1;
+        }
+
+        this.tips.get(0).header = "Fibonacci Potion";
+
+        if(getPotionLevel() > 0) {
+            if(getPotionLevel() == maxPotionLevel) {
+                this.tips.get(0).header += "+MAX";
+            } else {
+                this.tips.get(0).header += "+" + getPotionLevel();
+            }
+        }
+
+        this.tips.get(0).body = DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
+
+
+        this.name = this.tips.get(0).header;
+        this.description = this.tips.get(0).body;
     }
 
     @Override
@@ -45,7 +72,7 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
         }
     }
 
-    //TODO: make constructors that give the current upgrade level.
+    //TODO: make constructors that take the current upgrade level.
     @Override
     public AbstractPotion makeCopy() {
         return new FibonacciPotion();
@@ -53,7 +80,7 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
 
     // This is your potency.
     @Override
-    public int getPotency(final int potency) {
+    public int getPotency(final int ascension) {
         return firstInt + secondInt;
     }
 
@@ -67,25 +94,10 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
                 secondInt = secondInt + firstInt;
                 firstInt = temp;
             }
-            updatePowerTip();
+            initializeData();
             return true;
         }
         return false;
-    }
-
-    @Override
-    public void updatePowerTip() {
-        description = "#pTestMod NL " + DESCRIPTIONS[0] + getPotency() + DESCRIPTIONS[1] + maxPotionLevel;
-
-        //upgrade level updates before the name.
-        //TODO: Use a contains +, in case in the future you can upgrade multiple times at once.
-        if(getPotionLevel() == 1)
-            name = name + "+" + getPotionLevel();
-        else
-            name = name.split("\\+")[0] + "+" + getPotionLevel();
-
-        tips.clear();
-        tips.add(new PowerTip(name, description));
     }
 
     @Override

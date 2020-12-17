@@ -38,6 +38,17 @@ public class AttackPotionUpgradable extends AttackPotion implements UpgradablePo
 
         // initializeData clears tips THEN adds the main PowerTip THEN the Stance PowerTip.
         this.tips.get(0).body += (potionStrings.DESCRIPTIONS[0] + maxPotionLevel);
+
+        if(getPotionLevel() > 0) {
+            if(getPotionLevel() == maxPotionLevel) {
+                this.tips.get(0).header += "+MAX";
+            } else {
+                this.tips.get(0).header += "+" + getPotionLevel();
+            }
+        }
+
+        this.name = this.tips.get(0).header;
+        this.description = this.tips.get(0).body;
     }
 
     @Override
@@ -66,7 +77,7 @@ public class AttackPotionUpgradable extends AttackPotion implements UpgradablePo
     public boolean upgradePotion() {
         if(canUpgradePotion()) {
             potionLevel += 1;
-            updatePowerTip();
+            initializeData();
             return true;
         }
         return false;
@@ -89,24 +100,5 @@ public class AttackPotionUpgradable extends AttackPotion implements UpgradablePo
     @Override
     public int getPotionLevel() {
         return potionLevel;
-    }
-
-    //TODO: Remove this method and put it into initializeData. Or else
-    //Sacredbark will not work correctly.
-    @Override
-    public void updatePowerTip() {
-        initializeData();
-
-        if(getPotionLevel() > 0) {
-            this.tips.get(0).header += "+" + getPotionLevel();
-        }
-
-        //TODO: Perhaps add MAX to the name when it is maxed out
-
-        //the base game does this upon initializeData()... but I do not know where.
-        //this.tips.get(0).body = "#pTestMod NL " + this.tips.get(0).body;
-
-        this.name = this.tips.get(0).header;
-        this.description = this.tips.get(0).body;
     }
 }

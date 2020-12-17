@@ -38,13 +38,24 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
 
         // initializeData clears tips THEN adds the main PowerTip THEN the Stance PowerTip.
         this.tips.get(0).body += (potionStrings.DESCRIPTIONS[0] + maxPotionLevel);
+
+        if(getPotionLevel() > 0) {
+            if(getPotionLevel() == maxPotionLevel) {
+                this.tips.get(0).header += "+MAX";
+            } else {
+                this.tips.get(0).header += "+" + getPotionLevel();
+            }
+        }
+
+        this.name = this.tips.get(0).header;
+        this.description = this.tips.get(0).body;
     }
 
     @Override
     public boolean upgradePotion() {
         if(canUpgradePotion()) {
             potionLevel += 1;
-            updatePowerTip();
+            initializeData();
             return true;
         }
         return false;
@@ -61,22 +72,5 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     @Override
     public int getPotionLevel() {
         return potionLevel;
-    }
-
-    @Override
-    public void updatePowerTip() {
-        initializeData();
-
-        if(getPotionLevel() > 0) {
-            this.tips.get(0).header += "+" + getPotionLevel();
-        }
-
-        //TODO: Perhaps add a CAP or MAX to the name when it is maxed out
-
-        //the base game does this upon initializeData()... but I do not know where.
-        //this.tips.get(0).body = "#pTestMod NL " + this.tips.get(0).body;
-
-        this.name = this.tips.get(0).header;
-        this.description = this.tips.get(0).body;
     }
 }

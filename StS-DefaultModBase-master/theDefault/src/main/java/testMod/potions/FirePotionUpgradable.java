@@ -35,16 +35,30 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
 
     @Override
     public void initializeData() {
+        // this.name is not reverted by initializeData after an upgrade has been applied.
+        this.name = "Fire Potion";
         super.initializeData();
-        // this clears tips and adds the main PowerTip. So we know tips.get(0) is what we want
-        this.tips.get(0).body += potionStrings.DESCRIPTIONS[0] + maxPotionLevel;
+
+        // initializeData clears tips THEN adds the main PowerTip THEN the Stance PowerTip.
+        this.tips.get(0).body += (potionStrings.DESCRIPTIONS[0] + maxPotionLevel);
+
+        if(getPotionLevel() > 0) {
+            if(getPotionLevel() == maxPotionLevel) {
+                this.tips.get(0).header += "+MAX";
+            } else {
+                this.tips.get(0).header += "+" + getPotionLevel();
+            }
+        }
+
+        this.name = this.tips.get(0).header;
+        this.description = this.tips.get(0).body;
     }
 
     @Override
     public boolean upgradePotion() {
         if(canUpgradePotion()) {
             potionLevel += 1;
-            updatePowerTip();
+            initializeData();
             return true;
         }
         return false;
@@ -65,19 +79,4 @@ public class FirePotionUpgradable extends FirePotion implements UpgradablePotion
 
     @Override
     public int getPotency(int ascension) {return 20 + (3 * getPotionLevel());}
-
-    @Override
-    public void updatePowerTip() {
-        this.potency = this.getPotency();
-        this.description = "#pTestMod NL " + oldPotionStrings.DESCRIPTIONS[0] + this.potency + oldPotionStrings.DESCRIPTIONS[1];
-
-        this.description += DESCRIPTIONS[0] + maxPotionLevel;
-        //upgrade level updates before the name.
-        if(getPotionLevel() == 1)
-            this.name = this.name + "+" + getPotionLevel();
-        else
-            this.name = this.name.split("\\+")[0] + "+" + getPotionLevel();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-    }
 }
