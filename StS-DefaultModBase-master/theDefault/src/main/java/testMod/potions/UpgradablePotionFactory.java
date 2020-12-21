@@ -72,6 +72,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> DistilledChaosPotionUpgradable created.");
                 return new DistilledChaosPotionUpgradable();
             }
+            case "DuplicationPotion": {
+                logger.info("UpgradeablePotionFactory> DuplicationPotionUpgradable created.");
+                return new DuplicationPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

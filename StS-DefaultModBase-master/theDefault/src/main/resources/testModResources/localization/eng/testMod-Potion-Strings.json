@@ -62,5 +62,9 @@
         "testMod:DistilledChaosPotionUpgradable": {
                 "NAME": "Distilled Chaos",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 card #rper #r10 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:DuplicationPotionUpgradable": {
+                "NAME": "Duplication Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX next 2 cards. NL #bMax #bLevel: +"]
         }
 }
