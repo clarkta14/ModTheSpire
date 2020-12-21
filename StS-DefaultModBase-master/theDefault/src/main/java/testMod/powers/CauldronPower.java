@@ -81,6 +81,9 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
 
         //TODO: perhaps there should be a relic that determines how much cauldron
         //you can apply. Like max 5. upgrade to max 10 and so on.
+        //TODO: perhaps there should be a relic that allows you to point where the
+        //Cauldron goes. The drawback is that if you have more cauldron than the max,
+        //then it is wasted unlike with random where all Cauldron is applied.
         if (this.amount == 0) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         } else {
