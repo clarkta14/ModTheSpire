@@ -66,5 +66,9 @@
         "testMod:DuplicationPotionUpgradable": {
                 "NAME": "Duplication Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX next 2 cards. NL #bMax #bLevel: +"]
+        },
+        "testMod:ElixirUpgradable": {
+                "NAME": "Elixir",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Then draw that many. NL #bMax #bLevel: +"]
         }
 }

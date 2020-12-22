@@ -76,6 +76,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> DuplicationPotionUpgradable created.");
                 return new DuplicationPotionUpgradable();
             }
+            case "Elixir": {
+                logger.info("UpgradeablePotionFactory> ElixirUpgradable created.");
+                return new ElixirUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
