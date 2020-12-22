@@ -88,6 +88,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> EntropicBrewUpgradable created.");
                 return new EntropicBrewUpgradable();
             }
+            case "EssenceOfDarkness": {
+                logger.info("UpgradeablePotionFactory> EssenceOfDarknessUpgradable created.");
+                return new EssenceOfDarknessUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

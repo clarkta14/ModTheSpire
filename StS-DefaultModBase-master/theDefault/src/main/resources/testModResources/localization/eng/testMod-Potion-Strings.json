@@ -78,5 +78,9 @@
         "testMod:EntropicBrewUpgradable": {
                 "NAME": "Entropic Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: Potions get upgraded once #rper #r5 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:EssenceOfDarknessUpgradable": {
+                "NAME": "Essence Of Darkness",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Orb. NL #bMax #bLevel: +"]
         }
 }
