@@ -80,6 +80,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> ElixirUpgradable created.");
                 return new ElixirUpgradable();
             }
+            case "EnergyPotion": {
+                logger.info("UpgradeablePotionFactory> EnergyPotionUpgradable created.");
+                return new EnergyPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

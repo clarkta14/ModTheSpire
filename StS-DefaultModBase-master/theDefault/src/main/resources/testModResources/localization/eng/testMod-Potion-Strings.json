@@ -70,5 +70,9 @@
         "testMod:ElixirUpgradable": {
                 "NAME": "Elixir",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Then draw that many. NL #bMax #bLevel: +"]
+        },
+        "testMod:EnergyPotionUpgradable": {
+                "NAME": "Energy Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Gain that much next turn. NL #bMax #bLevel: +"]
         }
 }
