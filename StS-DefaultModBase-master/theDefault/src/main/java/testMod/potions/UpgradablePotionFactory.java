@@ -92,6 +92,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> EssenceOfDarknessUpgradable created.");
                 return new EssenceOfDarknessUpgradable();
             }
+            case "EssenceOfSteel": {
+                logger.info("UpgradeablePotionFactory> EssenceOfSteelUpgradable created.");
+                return new EssenceOfSteelUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

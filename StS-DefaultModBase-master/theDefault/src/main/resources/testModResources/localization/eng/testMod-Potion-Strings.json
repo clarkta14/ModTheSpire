@@ -82,5 +82,9 @@
         "testMod:EssenceOfDarknessUpgradable": {
                 "NAME": "Essence Of Darkness",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Orb. NL #bMax #bLevel: +"]
+        },
+        "testMod:EssenceOfSteelUpgradable": {
+                "NAME": "Essence Of Steel",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Plated Armor #rper #r2 #rlevels. NL #bMax #bLevel: +"]
         }
 }
