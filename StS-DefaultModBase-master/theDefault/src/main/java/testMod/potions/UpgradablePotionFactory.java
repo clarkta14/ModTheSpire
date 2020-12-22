@@ -84,6 +84,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> EnergyPotionUpgradable created.");
                 return new EnergyPotionUpgradable();
             }
+            case "EntropicBrew": {
+                logger.info("UpgradeablePotionFactory> EntropicBrewUpgradable created.");
+                return new EntropicBrewUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
@@ -120,6 +124,24 @@ public class UpgradablePotionFactory {
                 return new BloodPotionUpgradable();
             case 9:
                 return new BottledMiracleUpgradable();
+            case 10:
+                return new ColorlessPotionUpgradable();
+            case 11:
+                return new CultistPotionUpgradable();
+            case 12:
+                return new CunningPotionUpgradable();
+            case 13:
+                return new DexterityPotionUpgradable();
+            case 14:
+                return new DistilledChaosPotionUpgradable();
+            case 15:
+                return new DuplicationPotionUpgradable();
+            case 16:
+                return new ElixirUpgradable();
+            case 17:
+                return new EnergyPotionUpgradable();
+            case 18:
+                return new EntropicBrewUpgradable();
             default: {
                 logger.info("UpgradeablePotionFactory> Default case of makeRandomUpgradablePotion. Reduce random range.");
                 return null;

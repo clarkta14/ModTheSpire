@@ -5,7 +5,7 @@
 },
         "testMod:BottledLightning": {
                 "NAME": "Bottled Lightning",
-                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage+2. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage + 2. NL #bMax #bLevel: +"]
         },
         "testMod:FibonacciPotion": {
                 "NAME": "Fibonacci Potion",
@@ -74,5 +74,9 @@
         "testMod:EnergyPotionUpgradable": {
                 "NAME": "Energy Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Gain that much next turn. NL #bMax #bLevel: +"]
+        },
+        "testMod:EntropicBrewUpgradable": {
+                "NAME": "Entropic Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: Potions get upgraded once #rper #r5 #rlevels. NL #bMax #bLevel: +"]
         }
 }
