@@ -90,5 +90,9 @@
         "testMod:ExplosivePotionUpgradable": {
                 "NAME": "Explosive Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 damage. NL #bMax #bLevel: +"]
+        },
+        "testMod:FairyPotionUpgradable": {
+                "NAME": "Fairy Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Regen #rper #r5 #rlevels. NL #bMax #bLevel: +"]
         }
 }

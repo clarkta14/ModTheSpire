@@ -100,6 +100,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> ExplosivePotionUpgradable created.");
                 return new ExplosivePotionUpgradable();
             }
+            case "FairyPotion": {
+                logger.info("UpgradeablePotionFactory> FairyPotionUpgradable created.");
+                return new FairyPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
