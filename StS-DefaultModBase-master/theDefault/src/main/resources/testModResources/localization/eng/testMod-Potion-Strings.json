@@ -86,5 +86,9 @@
         "testMod:EssenceOfSteelUpgradable": {
                 "NAME": "Essence Of Steel",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Plated Armor #rper #r2 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:ExplosivePotionUpgradable": {
+                "NAME": "Explosive Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 damage. NL #bMax #bLevel: +"]
         }
 }
