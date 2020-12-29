@@ -37,7 +37,7 @@
         },
         "testMod:BloodPotionUpgradable": {
                 "NAME": "Blood Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: +1 HP #rper #r3 #rlevels. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +1% HP #rper #r3 #rlevels. NL #bMax #bLevel: +"]
         },
         "testMod:BottledMiracleUpgradable": {
                 "NAME": "Bottled Miracle",
@@ -98,5 +98,9 @@
         "testMod:FearPotionUpgradable": {
                 "NAME": "Fear Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Fear. #r@MAX +3. NL #bMax #bLevel: +"]
+        },
+        "testMod:FocusPotionUpgradable": {
+                "NAME": "Fear Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Gain 1 Focus at the start of your turn this combat. NL #bMax #bLevel: +"]
         }
 }

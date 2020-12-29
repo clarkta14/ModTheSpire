@@ -126,6 +126,6 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public AbstractPower makeCopy() {
-        return new CommonPower(owner, source, amount);
+        return new CauldronPower(owner, source, amount);
     }
 }
