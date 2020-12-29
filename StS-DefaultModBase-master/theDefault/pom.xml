@@ -52,6 +52,14 @@
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
             <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+        </dependency>
+
     </dependencies>
 
 
