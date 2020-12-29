@@ -94,5 +94,9 @@
         "testMod:FairyPotionUpgradable": {
                 "NAME": "Fairy Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Regen #rper #r5 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:FearPotionUpgradable": {
+                "NAME": "Fear Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Fear. #r@MAX +3. NL #bMax #bLevel: +"]
         }
 }

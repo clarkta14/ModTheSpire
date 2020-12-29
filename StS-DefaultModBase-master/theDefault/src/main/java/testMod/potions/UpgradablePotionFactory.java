@@ -104,6 +104,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> FairyPotionUpgradable created.");
                 return new FairyPotionUpgradable();
             }
+            case "FearPotion": {
+                logger.info("UpgradeablePotionFactory> FearPotionUpgradable created.");
+                return new FearPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
