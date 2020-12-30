@@ -116,6 +116,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> FruitJuiceUpgradable created.");
                 return new FruitJuiceUpgradable();
             }
+            case "GamblersBrew": {
+                logger.info("UpgradeablePotionFactory> GamblersBrewUpgradable created.");
+                return new GamblersBrewUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

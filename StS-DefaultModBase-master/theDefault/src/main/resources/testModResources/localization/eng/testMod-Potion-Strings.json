@@ -106,5 +106,9 @@
         "testMod:FruitJuiceUpgradable": {
                 "NAME": "Fruit Juice",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Max HP #rper #r5 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:GamblersBrewUpgradable": {
+                "NAME": "Gamblers Brew",
+                "DESCRIPTIONS": [" NL #bUpgrade: Then draw +1 Card #rper #r3 #rlevels. NL #bMax #bLevel: +"]
         }
 }
