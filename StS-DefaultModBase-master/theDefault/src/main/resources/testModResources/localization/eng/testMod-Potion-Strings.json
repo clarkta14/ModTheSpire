@@ -102,5 +102,9 @@
         "testMod:FocusPotionUpgradable": {
                 "NAME": "Fear Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Gain 1 Focus at the start of your turn this combat. NL #bMax #bLevel: +"]
+        },
+        "testMod:FruitJuiceUpgradable": {
+                "NAME": "Fruit Juice",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Max HP #rper #r5 #rlevels. NL #bMax #bLevel: +"]
         }
 }

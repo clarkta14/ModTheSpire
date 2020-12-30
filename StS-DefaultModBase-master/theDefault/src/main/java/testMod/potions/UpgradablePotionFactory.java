@@ -112,6 +112,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> FocusPotionUpgradable created.");
                 return new FocusPotionUpgradable();
             }
+            case "FruitJuice": {
+                logger.info("UpgradeablePotionFactory> FruitJuiceUpgradable created.");
+                return new FruitJuiceUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
