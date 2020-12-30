@@ -127,6 +127,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> HeartOfIronUpgradable created.");
                 return new HeartOfIronUpgradable();
             }
+            case "LiquidBronze": {
+                logger.info("UpgradeablePotionFactory> LiquidBronzeUpgradable created.");
+                return new LiquidBronzeUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

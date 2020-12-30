@@ -118,5 +118,9 @@
         "testMod:HeartOfIronUpgradable": {
                 "NAME": "Heart Of Iron",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Metallicize #rper #r3 #rlevels. NL #r@MAX +1. NL #bMax #bLevel: +"]
+        },
+        "testMod:LiquidBronzeUpgradable": {
+                "NAME": "Liquid Bronze",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Thorns #rper #r2 #rlevels. NL #r@MAX +3. NL #bMax #bLevel: +"]
         }
 }
