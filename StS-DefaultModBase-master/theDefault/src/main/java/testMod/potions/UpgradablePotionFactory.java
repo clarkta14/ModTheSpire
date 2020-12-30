@@ -1,6 +1,5 @@
 package testMod.potions;
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -120,6 +119,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> GamblersBrewUpgradable created.");
                 return new GamblersBrewUpgradable();
             }
+            case "GhostInAJar": {
+                logger.info("UpgradeablePotionFactory> GhostInAJarUpgradable created.");
+                return new GhostInAJarUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
@@ -204,7 +207,7 @@ public class UpgradablePotionFactory {
      * Creates an Upgradable Potion. Returns null if it is unrecognized. Works with vanilla names.
      * @param potionClassName the Simple Class Name of the desired potion.
      * @return IF potionClassName is recognized: AbstractPotion that implements UpgradablePotion.
-     *         ELSE: Null
+     *         ELSE: null
      */
     public static AbstractPotion makeUpgradablePotionFromSimpleClassName(String potionClassName) {
         if (makeUpgradablePotionFromVanillaSimpleClassName(potionClassName) != null) {

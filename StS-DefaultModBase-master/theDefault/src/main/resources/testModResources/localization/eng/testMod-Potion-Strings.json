@@ -110,5 +110,9 @@
         "testMod:GamblersBrewUpgradable": {
                 "NAME": "Gamblers Brew",
                 "DESCRIPTIONS": [" NL #bUpgrade: Then draw +1 Card #rper #r3 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:GhostInAJarUpgradable": {
+                "NAME": "Ghost In A Jar",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Intangible. NL #bMax #bLevel: +"]
         }
 }
