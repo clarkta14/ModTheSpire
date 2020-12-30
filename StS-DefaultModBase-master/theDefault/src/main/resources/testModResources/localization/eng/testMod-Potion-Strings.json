@@ -126,5 +126,9 @@
         "testMod:LiquidMemoriesUpgradable": {
                 "NAME": "Liquid Bronze",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: cards are upgraded and have Retain. NL #bMax #bLevel: +"]
+        },
+        "testMod:PoisonPotionUpgradable": {
+                "NAME": "Poison Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Poison. NL #r@MAX: poison ALL enemies. NL #bMax #bLevel: +"]
         }
 }
