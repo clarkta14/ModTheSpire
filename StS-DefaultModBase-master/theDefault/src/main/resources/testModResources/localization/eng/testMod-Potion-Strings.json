@@ -97,7 +97,7 @@
         },
         "testMod:FearPotionUpgradable": {
                 "NAME": "Fear Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: +1 Fear. #r@MAX +3. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Fear. NL #r@MAX +3. NL #bMax #bLevel: +"]
         },
         "testMod:FocusPotionUpgradable": {
                 "NAME": "Fear Potion",
@@ -114,5 +114,9 @@
         "testMod:GhostInAJarUpgradable": {
                 "NAME": "Ghost In A Jar",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Intangible. NL #bMax #bLevel: +"]
+        },
+        "testMod:HeartOfIronUpgradable": {
+                "NAME": "Heart Of Iron",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Metallicize #rper #r3 #rlevels. NL #r@MAX +1. NL #bMax #bLevel: +"]
         }
 }

@@ -123,6 +123,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> GhostInAJarUpgradable created.");
                 return new GhostInAJarUpgradable();
             }
+            case "HeartOfIron": {
+                logger.info("UpgradeablePotionFactory> HeartOfIronUpgradable created.");
+                return new HeartOfIronUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
