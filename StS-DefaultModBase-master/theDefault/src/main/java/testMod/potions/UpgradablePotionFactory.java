@@ -131,6 +131,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> LiquidBronzeUpgradable created.");
                 return new LiquidBronzeUpgradable();
             }
+            case "LiquidMemories": {
+                logger.info("UpgradeablePotionFactory> LiquidMemoriesUpgradable created.");
+                return new LiquidMemoriesUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

@@ -17,7 +17,7 @@
         },
         "testMod:AmbrosiaUpgradable": {
                 "NAME": "Ambrosia",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Enter Divinity next turn. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Enter Divinity next turn. NL #bMax #bLevel: +"]
         },
         "testMod:AncientPotionUpgradable": {
                 "NAME": "Ancient Potion",
@@ -25,11 +25,11 @@
         },
         "testMod:AttackPotionUpgradable": {
                 "NAME": "Attack Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Options are Upgraded. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Options are Upgraded. NL #bMax #bLevel: +"]
         },
         "testMod:BlessingOfTheForgeUpgradable": {
                 "NAME": "Blessing of the Forge",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Upgrade ENTIRE DECK this combat. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Upgrade ENTIRE DECK this combat. NL #bMax #bLevel: +"]
         },
         "testMod:BlockPotionUpgradable": {
                 "NAME": "Block Potion",
@@ -41,11 +41,11 @@
         },
         "testMod:BottledMiracleUpgradable": {
                 "NAME": "Bottled Miracle",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Miracle. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: +1 Miracle. NL #bMax #bLevel: +"]
         },
         "testMod:ColorlessPotionUpgradable": {
                 "NAME": "Colorless Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Options are Upgraded. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Options are Upgraded. NL #bMax #bLevel: +"]
         },
         "testMod:CultistPotionUpgradable": {
                 "NAME": "Cultist Potion",
@@ -53,7 +53,7 @@
         },
         "testMod:CunningPotionUpgradable": {
                 "NAME": "Cunning Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +2 Shiv+. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: +2 Shiv+. NL #bMax #bLevel: +"]
         },
         "testMod:DexterityPotionUpgradable": {
                 "NAME": "Dexterity Potion",
@@ -65,15 +65,15 @@
         },
         "testMod:DuplicationPotionUpgradable": {
                 "NAME": "Duplication Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX next 2 cards. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: next 2 cards. NL #bMax #bLevel: +"]
         },
         "testMod:ElixirUpgradable": {
                 "NAME": "Elixir",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Then draw that many. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Then draw that many. NL #bMax #bLevel: +"]
         },
         "testMod:EnergyPotionUpgradable": {
                 "NAME": "Energy Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Gain that much next turn. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Gain that much next turn. NL #bMax #bLevel: +"]
         },
         "testMod:EntropicBrewUpgradable": {
                 "NAME": "Entropic Potion",
@@ -81,7 +81,7 @@
         },
         "testMod:EssenceOfDarknessUpgradable": {
                 "NAME": "Essence Of Darkness",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Orb. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: +1 Orb. NL #bMax #bLevel: +"]
         },
         "testMod:EssenceOfSteelUpgradable": {
                 "NAME": "Essence Of Steel",
@@ -97,11 +97,11 @@
         },
         "testMod:FearPotionUpgradable": {
                 "NAME": "Fear Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: +1 Fear. NL #r@MAX +3. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Fear. NL #r@MAX: +3. NL #bMax #bLevel: +"]
         },
         "testMod:FocusPotionUpgradable": {
                 "NAME": "Fear Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX Gain 1 Focus at the start of your turn this combat. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Gain 1 Focus at the start of your turn this combat. NL #bMax #bLevel: +"]
         },
         "testMod:FruitJuiceUpgradable": {
                 "NAME": "Fruit Juice",
@@ -113,14 +113,18 @@
         },
         "testMod:GhostInAJarUpgradable": {
                 "NAME": "Ghost In A Jar",
-                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX +1 Intangible. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: +1 Intangible. NL #bMax #bLevel: +"]
         },
         "testMod:HeartOfIronUpgradable": {
                 "NAME": "Heart Of Iron",
-                "DESCRIPTIONS": [" NL #bUpgrade: +1 Metallicize #rper #r3 #rlevels. NL #r@MAX +1. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Metallicize #rper #r3 #rlevels. NL #r@MAX: +1. NL #bMax #bLevel: +"]
         },
         "testMod:LiquidBronzeUpgradable": {
                 "NAME": "Liquid Bronze",
-                "DESCRIPTIONS": [" NL #bUpgrade: +1 Thorns #rper #r2 #rlevels. NL #r@MAX +3. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Thorns #rper #r2 #rlevels. NL #r@MAX: +3. NL #bMax #bLevel: +"]
+        },
+        "testMod:LiquidMemoriesUpgradable": {
+                "NAME": "Liquid Bronze",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: cards are upgraded and have Retain. NL #bMax #bLevel: +"]
         }
 }
