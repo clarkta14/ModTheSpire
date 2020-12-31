@@ -142,5 +142,9 @@
         "testMod:RegenPotionUpgradable": {
                 "NAME": "Regen Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Regen #rper #r5 #rlevels. NL #bMax #bLevel: +"]
+        },
+        "testMod:SkillPotionUpgradable": {
+                "NAME": "Skill Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Options are Upgraded. NL #bMax #bLevel: +"]
         }
 }

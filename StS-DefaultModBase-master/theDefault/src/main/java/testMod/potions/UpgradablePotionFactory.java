@@ -151,6 +151,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> RegenPotionUpgradable created.");
                 return new RegenPotionUpgradable();
             }
+            case "SkillPotion": {
+                logger.info("UpgradeablePotionFactory> SkillPotionUpgradable created.");
+                return new SkillPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
