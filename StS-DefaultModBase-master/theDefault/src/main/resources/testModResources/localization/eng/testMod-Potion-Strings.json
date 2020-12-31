@@ -134,5 +134,9 @@
         "testMod:PotionOfCapacityUpgradable": {
                 "NAME": "Potion of Capacity",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Channel Lightning in new slots. NL #bMax #bLevel: +"]
+        },
+        "testMod:PowerPotionUpgradable": {
+                "NAME": "Power Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Options are Upgraded. NL #bMax #bLevel: +"]
         }
 }

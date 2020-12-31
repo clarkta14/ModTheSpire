@@ -143,6 +143,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> PotionOfCapacityUpgradable created.");
                 return new PotionOfCapacityUpgradable();
             }
+            case "PowerPotion": {
+                logger.info("UpgradeablePotionFactory> PowerPotionUpgradable created.");
+                return new PowerPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
