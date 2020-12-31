@@ -139,6 +139,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> PoisonPotionUpgradable created.");
                 return new PoisonPotionUpgradable();
             }
+            case "PotionOfCapacity": {
+                logger.info("UpgradeablePotionFactory> PotionOfCapacityUpgradable created.");
+                return new PotionOfCapacityUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

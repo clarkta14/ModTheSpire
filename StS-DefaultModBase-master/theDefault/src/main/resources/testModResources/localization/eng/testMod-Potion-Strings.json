@@ -130,5 +130,9 @@
         "testMod:PoisonPotionUpgradable": {
                 "NAME": "Poison Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Poison. NL #r@MAX: poison ALL enemies. NL #bMax #bLevel: +"]
+        },
+        "testMod:PotionOfCapacityUpgradable": {
+                "NAME": "Potion of Capacity",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Channel Lightning in new slots. NL #bMax #bLevel: +"]
         }
 }
