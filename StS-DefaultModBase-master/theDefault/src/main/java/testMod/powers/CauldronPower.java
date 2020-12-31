@@ -79,6 +79,7 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
             potionToFlash.flash();
         }
 
+        //TODO: Cauldron should apply at the end of combat as well.
         //TODO: perhaps this only activates if you deal damage this turn. That would prevent the desire to sit and not attack an easy enemy.
         //TODO: perhaps there should be a relic that determines how much cauldron
         //you can apply. Like max 5. upgrade to max 10 and so on.
