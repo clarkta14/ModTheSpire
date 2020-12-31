@@ -57,5 +57,10 @@
   "testMod:CauldronLight": {
     "NAME": "Cauldron Light",
     "DESCRIPTION": "Gain 5 testmod:Cauldron."
+  },
+  "testMod:IntoThePot": {
+    "NAME": "Into the Pot!",
+    "DESCRIPTION": "Innate NL Deal !D! damage. NL Gain !M! testmod:Cauldron. NL Draw !M! Card NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Innate NL Deal !D! damage. NL Gain !M! testmod:Cauldron. NL Draw !M! Cards NL Exhaust"
   }
 }
