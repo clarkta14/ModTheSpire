@@ -138,5 +138,9 @@
         "testMod:PowerPotionUpgradable": {
                 "NAME": "Power Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Options are Upgraded. NL #bMax #bLevel: +"]
+        },
+        "testMod:RegenPotionUpgradable": {
+                "NAME": "Regen Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Regen #rper #r5 #rlevels. NL #bMax #bLevel: +"]
         }
 }
