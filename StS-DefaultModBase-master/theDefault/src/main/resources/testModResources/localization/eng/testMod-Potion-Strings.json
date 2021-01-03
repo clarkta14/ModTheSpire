@@ -162,5 +162,9 @@
         "testMod:SpeedPotionUpgradable": {
                 "NAME": "Speed Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Dexterity #rper #r2 #rlevels. NL #bMax #bLevel: "]
+        },
+        "testMod:StancePotionUpgradable": {
+                "NAME": "Stance Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Add empty as an option #ror can choose at end of turn. NL #bMax #bLevel: "]
         }
 }

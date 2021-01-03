@@ -167,6 +167,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> SpeedPotionUpgradable created.");
                 return new SpeedPotionUpgradable();
             }
+            case "StancePotion": {
+                logger.info("UpgradeablePotionFactory> StancePotionUpgradable created.");
+                return new StancePotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
