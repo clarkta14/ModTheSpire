@@ -171,6 +171,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> StancePotionUpgradable created.");
                 return new StancePotionUpgradable();
             }
+            case "SteroidPotion": {
+                logger.info("UpgradeablePotionFactory> SteroidPotionUpgradable created.");
+                return new SteroidPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;

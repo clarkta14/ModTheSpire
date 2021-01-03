@@ -166,5 +166,9 @@
         "testMod:StancePotionUpgradable": {
                 "NAME": "Stance Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Add empty as an option #ror can choose at end of turn. NL #bMax #bLevel: "]
+        },
+        "testMod:SteroidPotionUpgradable": {
+                "NAME": "Flex Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Strength #rper #r2 #rlevels. NL #bMax #bLevel: "]
         }
 }
