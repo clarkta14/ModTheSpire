@@ -154,5 +154,9 @@
         "testMod:SmokeGrenadeUpgradable": {
                 "NAME": "Smoke Grenade",
                 "DESCRIPTIONS": [" NL #bUpgrade: Not upgradable. NL #bMax #bLevel: "]
+        },
+        "testMod:SneckoOilUpgradable": {
+                "NAME": "Snecko Oil",
+                "DESCRIPTIONS": [" NL #bUpgrade: The cost range is reduced from 0-3 to 0-2. NL #bMax #bLevel: "]
         }
 }

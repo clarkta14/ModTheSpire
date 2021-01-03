@@ -159,6 +159,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> SmokeBombUpgradable created.");
                 return new SmokeBombUpgradable();
             }
+            case "SneckoOil": {
+                logger.info("UpgradeablePotionFactory> SneckoOilUpgradable created.");
+                return new SneckoOilUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
