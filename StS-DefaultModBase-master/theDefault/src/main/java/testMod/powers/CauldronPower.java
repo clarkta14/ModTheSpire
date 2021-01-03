@@ -79,6 +79,8 @@ public class CauldronPower extends AbstractPower implements CloneablePowerInterf
             potionToFlash.flash();
         }
 
+        //TODO: There are cards that give you potions but you can only use them if you
+        //have a certain level of Cauldron, or they have affects according to your current level
         //TODO: Cauldron should apply at the end of combat as well.
         //TODO: perhaps this only activates if you deal damage this turn. That would prevent the desire to sit and not attack an easy enemy.
         //TODO: perhaps there should be a relic that determines how much cauldron
