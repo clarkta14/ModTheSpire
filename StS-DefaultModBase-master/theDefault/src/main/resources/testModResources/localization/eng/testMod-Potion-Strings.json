@@ -146,5 +146,13 @@
         "testMod:SkillPotionUpgradable": {
                 "NAME": "Skill Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Options are Upgraded. NL #bMax #bLevel: +"]
+        },
+        "testMod:SmokeBombUpgradable": {
+                "NAME": "Smoke Bomb",
+                "DESCRIPTIONS": [" NL #bUpgrade: #r@MAX: Obtain a #ySmoke #yGrenade after use. NL #bMax #bLevel: +"]
+        },
+        "testMod:SmokeGrenadeUpgradable": {
+                "NAME": "Smoke Grenade",
+                "DESCRIPTIONS": [" NL #bUpgrade: Not upgradable. NL #bMax #bLevel: "]
         }
 }

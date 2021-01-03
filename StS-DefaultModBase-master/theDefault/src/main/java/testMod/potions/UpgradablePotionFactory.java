@@ -155,6 +155,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> SkillPotionUpgradable created.");
                 return new SkillPotionUpgradable();
             }
+            case "SmokeBomb": {
+                logger.info("UpgradeablePotionFactory> SmokeBombUpgradable created.");
+                return new SmokeBombUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
@@ -285,6 +289,10 @@ public class UpgradablePotionFactory {
             }
 
 
+            case "SmokeGrenadeUpgradable": {
+                logger.info("UpgradeablePotionFactory> SmokeGrenadeUpgradable created.");
+                return new SmokeGrenadeUpgradable();
+            }
             case "BottledLightning": {
                 logger.info("UpgradeablePotionFactory> BottledLightning created.");
                 return new BottledLightning();
