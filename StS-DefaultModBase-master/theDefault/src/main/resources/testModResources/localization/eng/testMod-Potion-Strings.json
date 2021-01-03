@@ -170,5 +170,9 @@
         "testMod:SteroidPotionUpgradable": {
                 "NAME": "Flex Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Strength #rper #r2 #rlevels. NL #bMax #bLevel: "]
+        },
+        "testMod:StrengthPotionUpgradable": {
+                "NAME": "Strength Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Strength #rper #r5 #rlevels. NL #bMax #bLevel: "]
         }
 }
