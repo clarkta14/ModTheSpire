@@ -158,5 +158,9 @@
         "testMod:SneckoOilUpgradable": {
                 "NAME": "Snecko Oil",
                 "DESCRIPTIONS": [" NL #bUpgrade: The cost range is reduced from 0-3 to 0-2. NL #bMax #bLevel: "]
+        },
+        "testMod:SpeedPotionUpgradable": {
+                "NAME": "Speed Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Dexterity #rper #r2 #rlevels. NL #bMax #bLevel: "]
         }
 }
