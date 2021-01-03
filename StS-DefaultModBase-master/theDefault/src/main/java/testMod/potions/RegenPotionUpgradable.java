@@ -21,7 +21,7 @@ public class RegenPotionUpgradable extends RegenPotion implements UpgradablePoti
         super();
         initializeData();
     }
-
+//TODO: maybe this should just give tempHP as well instead of healing so much (AddTemporaryHPAction)
     @Override
     public void initializeData() {
         // this.name is not reverted by initializeData after an upgrade has been applied.
