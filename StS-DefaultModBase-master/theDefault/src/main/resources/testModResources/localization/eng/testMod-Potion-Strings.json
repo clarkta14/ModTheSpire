@@ -5,7 +5,7 @@
 },
         "testMod:BottledLightning": {
                 "NAME": "Bottled Lightning",
-                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: Damage + 2. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": ["Deal ", " damage to a random enemy. NL #bUpgrade: +2 Damage. NL #bMax #bLevel: +"]
         },
         "testMod:FibonacciPotion": {
                 "NAME": "Fibonacci Potion",
@@ -13,7 +13,7 @@
         },
         "testMod:FirePotionUpgradable": {
                 "NAME": "Fire Potion",
-                "DESCRIPTIONS": [" NL #bUpgrade: +3 damage. NL #bMax #bLevel: +"]
+                "DESCRIPTIONS": [" NL #bUpgrade: +3 Damage. NL #bMax #bLevel: +"]
         },
         "testMod:AmbrosiaUpgradable": {
                 "NAME": "Ambrosia",
@@ -178,5 +178,9 @@
         "testMod:SwiftPotionUpgradable": {
                 "NAME": "Swift Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Card #rper #r5 #rlevels. NL #r@MAX: Draw +1 card every turn. NL #bMax #bLevel: "]
+        },
+        "testMod:WeakenPotionUpgradable": {
+                "NAME": "Weak Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Weak. NL #r@MAX: +3. NL #bMax #bLevel: +"]
         }
 }

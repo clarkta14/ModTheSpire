@@ -183,6 +183,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> SwiftPotionUpgradable created.");
                 return new SwiftPotionUpgradable();
             }
+            case "WeakenPotion": {
+                logger.info("UpgradeablePotionFactory> WeakenPotionUpgradable created.");
+                return new WeakenPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
