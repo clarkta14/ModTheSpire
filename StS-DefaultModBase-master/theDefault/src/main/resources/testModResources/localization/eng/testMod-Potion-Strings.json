@@ -174,5 +174,9 @@
         "testMod:StrengthPotionUpgradable": {
                 "NAME": "Strength Potion",
                 "DESCRIPTIONS": [" NL #bUpgrade: +1 Strength #rper #r5 #rlevels. NL #bMax #bLevel: "]
+        },
+        "testMod:SwiftPotionUpgradable": {
+                "NAME": "Swift Potion",
+                "DESCRIPTIONS": [" NL #bUpgrade: +1 Card #rper #r5 #rlevels. NL #r@MAX: Draw +1 card every turn. NL #bMax #bLevel: "]
         }
 }

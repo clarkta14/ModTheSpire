@@ -1,18 +1,42 @@
 {
-"testMod:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"testMod:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-},
-"testMod:CauldronPower": {
-        "NAME": "Cauldron",
-        "DESCRIPTIONS": ["At the start of your turn, #bupgrade a random #yPotion.", " Reduce by 1. ", " Repeat ", " times."]
-},
-"testMod:FocusPotionMaxPower": {
-        "NAME": "Focus Potion Max",
-        "DESCRIPTIONS": ["At the start of your turn, gain #b", " Focus."]
-}
+  "testMod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "testMod:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+  "testMod:CauldronPower": {
+    "NAME": "Cauldron",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #bupgrade a random #yPotion.",
+      " Reduce by 1. ",
+      " Repeat ",
+      " times."
+    ]
+  },
+  "testMod:FocusPotionMaxPower": {
+    "NAME": "Focus Potion Max",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " Focus."
+    ]
+  },
+  "testMod:SwiftPotionMaxPower": {
+    "NAME": "Swift Potion Max",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " Cards.",
+      " Card."
+    ]
+  }
 }

@@ -179,6 +179,10 @@ public class UpgradablePotionFactory {
                 logger.info("UpgradeablePotionFactory> StrengthPotionUpgradable created.");
                 return new StrengthPotionUpgradable();
             }
+            case "SwiftPotion": {
+                logger.info("UpgradeablePotionFactory> SwiftPotionUpgradable created.");
+                return new SwiftPotionUpgradable();
+            }
             default: {
                 logger.info("UpgradeablePotionFactory> There is no upgradable version of: " + potionClassName);
                 return null;
