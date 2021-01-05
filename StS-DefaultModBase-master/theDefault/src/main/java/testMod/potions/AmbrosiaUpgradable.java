@@ -1,9 +1,12 @@
 package testMod.potions;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.Ambrosia;
+import testMod.powers.maxPotionPowers.AmbrosiaPotionMaxPower;
 
 public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(AmbrosiaUpgradable.class.getSimpleName());
@@ -26,7 +29,9 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
     public void use(AbstractCreature target) {
         super.use(target);
         if(getPotionLevel() >= maxPotionLevel) {
-            //TODO: enter Divinity again next turn
+            AbstractCreature p = AbstractDungeon.player;
+            AmbrosiaPotionMaxPower APMP = new AmbrosiaPotionMaxPower(p, p, 1);
+            addToBot(new ApplyPowerAction(p, p, APMP));
         }
     }
 

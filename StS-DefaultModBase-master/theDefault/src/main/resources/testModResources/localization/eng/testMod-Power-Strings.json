@@ -38,5 +38,14 @@
       " Cards.",
       " Card."
     ]
+  },
+  "testMod:AmbrosiaPotionMaxPower": {
+    "NAME": "Ambrosia Potion Max",
+    "DESCRIPTIONS": [
+      "At the start of your next ",
+      " enter Divinity.",
+      "turn,",
+      " turns,"
+    ]
   }
 }
