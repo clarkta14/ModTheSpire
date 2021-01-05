@@ -53,8 +53,7 @@ public class SwiftPotionUpgradable extends SwiftPotion implements UpgradablePoti
         if(getPotionLevel() >= maxPotionLevel) {
             AbstractCreature p = AbstractDungeon.player;
             SwiftPotionMaxPower SPMP = new SwiftPotionMaxPower(p, 1);
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, p, SPMP));
+            addToBot(new ApplyPowerAction(p, p, SPMP));
         }
     }
 
