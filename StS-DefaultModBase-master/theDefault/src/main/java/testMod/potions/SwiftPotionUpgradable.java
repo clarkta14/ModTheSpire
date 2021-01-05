@@ -1,13 +1,12 @@
 package testMod.potions;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.SwiftPotion;
-import testMod.powers.SwiftPotionMaxPower;
+import testMod.powers.maxPotionPowers.SwiftPotionMaxPower;
 
 public class SwiftPotionUpgradable extends SwiftPotion implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(SwiftPotionUpgradable.class.getSimpleName());

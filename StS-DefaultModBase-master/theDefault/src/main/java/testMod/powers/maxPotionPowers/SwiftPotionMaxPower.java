@@ -1,4 +1,4 @@
-package testMod.powers;
+package testMod.powers.maxPotionPowers;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;

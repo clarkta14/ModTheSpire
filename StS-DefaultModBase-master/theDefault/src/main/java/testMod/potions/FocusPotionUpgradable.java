@@ -1,14 +1,12 @@
 package testMod.potions;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.blue.BiasedCognition;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.FocusPotion;
-import testMod.powers.CauldronPower;
-import testMod.powers.FocusPotionMaxPower;
+import testMod.powers.maxPotionPowers.FocusPotionMaxPower;
 
 public class FocusPotionUpgradable extends FocusPotion implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(FocusPotionUpgradable.class.getSimpleName());

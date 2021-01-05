@@ -27,14 +27,14 @@
   "testMod:FocusPotionMaxPower": {
     "NAME": "Focus Potion Max",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
+      "At the start of your turn this combat, gain #b",
       " Focus."
     ]
   },
   "testMod:SwiftPotionMaxPower": {
     "NAME": "Swift Potion Max",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw #b",
+      "At the start of your turn this combat, draw #b",
       " Cards.",
       " Card."
     ]

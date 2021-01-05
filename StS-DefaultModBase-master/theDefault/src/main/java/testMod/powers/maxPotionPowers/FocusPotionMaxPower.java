@@ -1,4 +1,4 @@
-package testMod.powers;
+package testMod.powers.maxPotionPowers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
