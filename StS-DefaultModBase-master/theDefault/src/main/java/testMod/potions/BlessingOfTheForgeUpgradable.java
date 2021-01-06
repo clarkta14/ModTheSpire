@@ -1,5 +1,6 @@
 package testMod.potions;
 
+import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
@@ -49,8 +50,7 @@ public class BlessingOfTheForgeUpgradable extends BlessingOfTheForge implements 
         if (getPotionLevel() < maxPotionLevel) {
             super.use(target);
         } else {
-            //TODO: implement use on every card in your deck. Similar to the Apotheosis card
-            super.use(target);
+            this.addToBot(new ApotheosisAction());
         }
     }
 
