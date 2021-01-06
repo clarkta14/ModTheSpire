@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.LiquidMemories;
+import testMod.actions.LiquidMemoriesMaxAction;
 
 public class LiquidMemoriesUpgradable extends LiquidMemories implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(LiquidMemoriesUpgradable.class.getSimpleName());
@@ -47,8 +48,10 @@ public class LiquidMemoriesUpgradable extends LiquidMemories implements Upgradab
 
     @Override
     public void use(AbstractCreature target) {
-        super.use(target);
-        //TODO: Those cards are upgraded and gain retain. See BetterDiscardPileToHandAction -> Var5 around line 70.
+        if (getPotionLevel() >= maxPotionLevel)
+            addToBot(new LiquidMemoriesMaxAction(getPotency()));
+        else
+            super.use(target);
     }
 
     @Override

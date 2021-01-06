@@ -96,13 +96,13 @@
   "testMod:DistilledChaosPotionUpgradable": {
     "NAME": "Distilled Chaos",
     "DESCRIPTIONS": [
-      " NL #bUpgrade: +1 card #rper #r10 #rlevels. NL #bMax #bLevel: +"
+      " NL #bUpgrade: +1 Card #rper #r10 #rlevels. NL #bMax #bLevel: +"
     ]
   },
   "testMod:DuplicationPotionUpgradable": {
     "NAME": "Duplication Potion",
     "DESCRIPTIONS": [
-      " NL #bUpgrade: #r@MAX: next 2 cards. NL #bMax #bLevel: +"
+      " NL #bUpgrade: #r@MAX: Next 2 cards. NL #bMax #bLevel: +"
     ]
   },
   "testMod:ElixirUpgradable": {
@@ -138,7 +138,7 @@
   "testMod:ExplosivePotionUpgradable": {
     "NAME": "Explosive Potion",
     "DESCRIPTIONS": [
-      " NL #bUpgrade: +1 damage. NL #bMax #bLevel: +"
+      " NL #bUpgrade: +1 Damage. NL #bMax #bLevel: +"
     ]
   },
   "testMod:FairyPotionUpgradable": {
@@ -192,7 +192,8 @@
   "testMod:LiquidMemoriesUpgradable": {
     "NAME": "Liquid Bronze",
     "DESCRIPTIONS": [
-      " NL #bUpgrade: #r@MAX: cards are upgraded and have Retain. NL #bMax #bLevel: +"
+      " NL #bUpgrade: #r@MAX: Selected cards are upgraded this combat. NL #bMax #bLevel: +",
+      " These cards will be upgraded if able."
     ]
   },
   "testMod:PoisonPotionUpgradable": {
