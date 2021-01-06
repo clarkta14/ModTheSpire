@@ -4,7 +4,9 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.SmokeBomb;
 
@@ -12,6 +14,7 @@ public class SmokeBombUpgradable extends SmokeBomb implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(SmokeBombUpgradable.class.getSimpleName());
 
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
+    private static final PotionStrings grenadeStrings = CardCrawlGame.languagePack.getPotionString(SmokeGrenadeUpgradable.POTION_ID);
     private static final PotionStrings oldPotionStrings = CardCrawlGame.languagePack.getPotionString(SmokeBomb.POTION_ID);
 
     public static final String NAME = oldPotionStrings.NAME;
@@ -30,6 +33,7 @@ public class SmokeBombUpgradable extends SmokeBomb implements UpgradablePotion {
         // SmokeBomb initializeData was not implemented for some reason. So it is done from scratch here.
         this.tips.clear();
         this.tips.add(new PowerTip(NAME, oldPotionStrings.DESCRIPTIONS[0]));
+        this.tips.add(new PowerTip(TipHelper.capitalize(grenadeStrings.NAME), grenadeStrings.DESCRIPTIONS[1]));
 
         this.tips.get(0).body += (potionStrings.DESCRIPTIONS[0] + maxPotionLevel);
 

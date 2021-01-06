@@ -190,10 +190,10 @@
     ]
   },
   "testMod:LiquidMemoriesUpgradable": {
-    "NAME": "Liquid Bronze",
+    "NAME": "Liquid Memories",
     "DESCRIPTIONS": [
       " NL #bUpgrade: #r@MAX: Selected cards are upgraded this combat. NL #bMax #bLevel: +",
-      " These cards will be upgraded if able."
+      " Selected cards will be upgraded if able."
     ]
   },
   "testMod:PoisonPotionUpgradable": {
@@ -235,7 +235,8 @@
   "testMod:SmokeGrenadeUpgradable": {
     "NAME": "Smoke Grenade",
     "DESCRIPTIONS": [
-      " NL #bUpgrade: Not upgradable. NL #bMax #bLevel: "
+      " NL #bUpgrade: Not upgradable. NL #bMax #bLevel: ",
+      "Acts as a Smoke Bomb, but is not upgradable."
     ]
   },
   "testMod:SneckoOilUpgradable": {
