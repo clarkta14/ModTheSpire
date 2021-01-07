@@ -2,6 +2,7 @@ package testMod.potions;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.PowerPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
+import testMod.actions.DiscoveryActionUpgradedOptions;
 
 public class PowerPotionUpgradable extends PowerPotion implements UpgradablePotion {
     public static final String POTION_ID = testMod.DefaultMod.makeID(PowerPotionUpgradable.class.getSimpleName());
@@ -50,23 +52,10 @@ public class PowerPotionUpgradable extends PowerPotion implements UpgradablePoti
 
     @Override
     public void use(AbstractCreature target) {
-        AbstractCreature p = AbstractDungeon.player;
-
-        // Regular use if potion is not maxed.
-        // Regular use if player already has MaterRealityPower since cards will
-        // already be upgraded.
-        if (getPotionLevel() < maxPotionLevel || p.hasPower("MasterRealityPower")) {
-            super.use(target);
+        if (getPotionLevel() >= maxPotionLevel) {
+            this.addToBot(new DiscoveryActionUpgradedOptions(AbstractCard.CardType.POWER, this.potency));
         } else {
-            //TODO: this works, but it seems jank. Namely, it doesn't show the cards as upgraded.
-            AbstractPower MRP = new MasterRealityPower(p);
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, p, MRP));
-
             super.use(target);
-
-            AbstractDungeon.actionManager.addToBottom(
-                    new RemoveSpecificPowerAction(p, p, MRP));
         }
     }
 
