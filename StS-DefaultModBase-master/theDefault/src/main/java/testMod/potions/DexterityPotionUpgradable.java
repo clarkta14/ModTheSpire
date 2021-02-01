@@ -2,6 +2,7 @@ package testMod.potions;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.DexterityPotion;
 
 public class DexterityPotionUpgradable extends DexterityPotion implements UpgradablePotion {
@@ -64,6 +65,11 @@ public class DexterityPotionUpgradable extends DexterityPotion implements Upgrad
     @Override
     public int getPotency(final int ascension) {
         return 2 + (int) Math.floor(potionLevel  / 3);
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

@@ -2,6 +2,7 @@ package testMod.potions;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.CunningPotion;
 
 public class CunningPotionUpgradable extends CunningPotion implements UpgradablePotion {
@@ -64,6 +65,11 @@ public class CunningPotionUpgradable extends CunningPotion implements Upgradable
     @Override
     public int getPotency(final int ascension) {
         return 3 + (2 * (int) Math.floor(potionLevel  / maxPotionLevel));
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

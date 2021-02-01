@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.red.Flex;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.SteroidPotion;
 import com.megacrit.cardcrawl.potions.StrengthPotion;
 
@@ -67,6 +68,11 @@ public class SteroidPotionUpgradable extends SteroidPotion implements Upgradable
             return true;
         }
         return false;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

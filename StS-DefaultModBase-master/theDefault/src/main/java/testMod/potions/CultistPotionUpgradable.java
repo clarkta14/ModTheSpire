@@ -2,6 +2,7 @@ package testMod.potions;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.CultistPotion;
 
 public class CultistPotionUpgradable extends CultistPotion implements UpgradablePotion{
@@ -64,6 +65,11 @@ public class CultistPotionUpgradable extends CultistPotion implements Upgradable
     @Override
     public int getPotency(final int ascension) {
         return 1 + (int) Math.floor(potionLevel  / 5);
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

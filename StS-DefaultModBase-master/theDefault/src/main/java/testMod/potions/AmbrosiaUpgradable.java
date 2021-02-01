@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.Ambrosia;
 import testMod.powers.maxPotionPowers.AmbrosiaPotionMaxPower;
 
@@ -72,6 +73,11 @@ public class AmbrosiaUpgradable extends Ambrosia implements UpgradablePotion {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.Lightning;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionOfCapacity;
 
 public class PotionOfCapacityUpgradable extends PotionOfCapacity implements UpgradablePotion {
@@ -72,6 +73,11 @@ public class PotionOfCapacityUpgradable extends PotionOfCapacity implements Upgr
             return true;
         }
         return false;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

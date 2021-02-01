@@ -202,7 +202,7 @@ public class UpgradablePotionFactory {
     public static AbstractPotion makeRandomUpgradablePotion() {
         Random random = new Random();
         //TODO: the hardcoded number here should be equal to the number of upgradable potions. Perhaps that can be calculated.
-        switch (random.nextInt(10)) {
+        switch (random.nextInt(45)) {
             case 0:
                 return new FirePotionUpgradable();
             case 1:
@@ -241,6 +241,60 @@ public class UpgradablePotionFactory {
                 return new EnergyPotionUpgradable();
             case 18:
                 return new EntropicBrewUpgradable();
+            case 19:
+                return new EssenceOfDarknessUpgradable();
+            case 20:
+                return new EssenceOfSteelUpgradable();
+            case 21:
+                return new ExplosivePotionUpgradable();
+            case 22:
+                return new FairyPotionUpgradable();
+            case 23:
+                return new FearPotionUpgradable();
+            case 24:
+                return new FocusPotionUpgradable();
+            case 25:
+                return new FruitJuiceUpgradable();
+            case 26:
+                return new GamblersBrewUpgradable();
+            case 27:
+                return new GhostInAJarUpgradable();
+            case 28:
+                return new HeartOfIronUpgradable();
+            case 29:
+                return new LiquidBronzeUpgradable();
+            case 30:
+                return new LiquidMemoriesUpgradable();
+            case 31:
+                return new PoisonPotionUpgradable();
+            case 32:
+                return new PotionOfCapacityUpgradable();
+            case 33:
+                return new PowerPotionUpgradable();
+            case 34:
+                return new RegenPotionUpgradable();
+            case 35:
+                return new SkillPotionUpgradable();
+            case 36:
+                return new SmokeBombUpgradable();
+            case 37:
+                return new SmokeGrenadeUpgradable();
+            case 38:
+                return new SneckoOilUpgradable();
+            case 39:
+                return new SpeedPotionUpgradable();
+            case 40:
+                return new StancePotionUpgradable();
+            case 41:
+                return new SteroidPotionUpgradable();
+            case 42:
+                return new StrengthPotionUpgradable();
+            case 43:
+                return new SwiftPotionUpgradable();
+            case 44:
+                return new WeakenPotionUpgradable();
+
+
             default: {
                 logger.info("UpgradeablePotionFactory> Default case of makeRandomUpgradablePotion. Reduce random range.");
                 return null;
@@ -278,45 +332,11 @@ public class UpgradablePotionFactory {
             return makeUpgradablePotionFromVanillaSimpleClassName(potionClassName);
         }
 
+        if (makeUpgradablePotionFromVanillaSimpleClassName(potionClassName.replace("Upgradable", "")) != null) {
+            return makeUpgradablePotionFromVanillaSimpleClassName(potionClassName.replace("Upgradable", ""));
+        }
+
         switch (potionClassName) {
-            case "FirePotionUpgradable": {
-                logger.info("UpgradeablePotionFactory> FirePotionUpgradable created.");
-                return new FirePotionUpgradable();
-            }
-            case "AmbrosiaUpgradable": {
-                logger.info("UpgradeablePotionFactory> AmbrosiaUpgradable created.");
-                return new AmbrosiaUpgradable();
-            }
-            case "AncientPotionUpgradable": {
-                logger.info("UpgradeablePotionFactory> AncientPotionUpgradable created.");
-                return new AncientPotionUpgradable();
-            }
-            case "AttackPotionUpgradable": {
-                logger.info("UpgradeablePotionFactory> AttackPotionUpgradable created.");
-                return new AttackPotionUpgradable();
-            }
-            case "BlessingOfTheForgeUpgradable": {
-                logger.info("UpgradeablePotionFactory> BlessingOfTheForgeUpgradable created.");
-                return new BlessingOfTheForgeUpgradable();
-            }
-            case "BlockPotionUpgradable": {
-                logger.info("UpgradeablePotionFactory> BlockPotionUpgradable created.");
-                return new BlockPotionUpgradable();
-            }
-            case "BloodPotionUpgradable": {
-                logger.info("UpgradeablePotionFactory> BloodPotionUpgradable created.");
-                return new BloodPotionUpgradable();
-            }
-            case "BottledMiracleUpgradable": {
-                logger.info("UpgradeablePotionFactory> BottledMiracleUpgradable created.");
-                return new BottledMiracleUpgradable();
-            }
-            case "ColorlessPotionUpgradable": {
-                logger.info("UpgradeablePotionFactory> ColorlessPotionUpgradable created.");
-                return new ColorlessPotionUpgradable();
-            }
-
-
             case "SmokeGrenadeUpgradable": {
                 logger.info("UpgradeablePotionFactory> SmokeGrenadeUpgradable created.");
                 return new SmokeGrenadeUpgradable();

@@ -65,12 +65,6 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
         }
     }
 
-    //TODO: make constructors that take the current upgrade level.
-    @Override
-    public AbstractPotion makeCopy() {
-        return new FibonacciPotion();
-    }
-
     // This is your potency.
     @Override
     public int getPotency(final int ascension) {
@@ -96,6 +90,11 @@ public class FibonacciPotion extends CustomPotion implements UpgradablePotion {
     @Override
     public int getPotionLevel() {
         return potionLevel;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

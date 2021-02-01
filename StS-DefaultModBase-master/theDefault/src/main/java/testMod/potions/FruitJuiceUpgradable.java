@@ -3,6 +3,7 @@ package testMod.potions;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.FruitJuice;
 
 public class FruitJuiceUpgradable extends FruitJuice implements UpgradablePotion {
@@ -64,6 +65,11 @@ public class FruitJuiceUpgradable extends FruitJuice implements UpgradablePotion
             return true;
         }
         return false;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

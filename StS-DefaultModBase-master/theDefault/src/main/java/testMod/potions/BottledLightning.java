@@ -63,11 +63,6 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
         }
     }
 
-    @Override
-    public AbstractPotion makeCopy() {
-        return new BottledLightning();
-    }
-
     // This is your potency.
     @Override
     public int getPotency(final int potency) {
@@ -88,6 +83,11 @@ public class BottledLightning extends CustomPotion implements UpgradablePotion{
     @Override
     public int getPotionLevel() {
         return potionLevel;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

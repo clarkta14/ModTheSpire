@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.SmokeBomb;
 
 public class SmokeGrenadeUpgradable extends SmokeBomb implements UpgradablePotion {
@@ -43,6 +44,11 @@ public class SmokeGrenadeUpgradable extends SmokeBomb implements UpgradablePotio
     @Override
     public boolean canUpgradePotion() {
         return false;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

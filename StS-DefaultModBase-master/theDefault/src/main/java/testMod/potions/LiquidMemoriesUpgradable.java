@@ -72,7 +72,6 @@ public class LiquidMemoriesUpgradable extends LiquidMemories implements Upgradab
         return false;
     }
 
-    //TODO: add this to all upgradable Potions.
     @Override
     public AbstractPotion makeCopy() {
         return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());

@@ -3,6 +3,7 @@ package testMod.potions;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.ExplosivePotion;
 
 public class ExplosivePotionUpgradable extends ExplosivePotion implements UpgradablePotion {
@@ -64,6 +65,11 @@ public class ExplosivePotionUpgradable extends ExplosivePotion implements Upgrad
             return true;
         }
         return false;
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override

@@ -2,6 +2,7 @@ package testMod.potions;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.DistilledChaosPotion;
 
 public class DistilledChaosPotionUpgradable extends DistilledChaosPotion implements UpgradablePotion{
@@ -64,6 +65,11 @@ public class DistilledChaosPotionUpgradable extends DistilledChaosPotion impleme
     @Override
     public int getPotency(final int ascension) {
         return 3 + (int) Math.floor(potionLevel  / 10);
+    }
+
+    @Override
+    public AbstractPotion makeCopy() {
+        return UpgradablePotionFactory.makeUpgradablePotionFromSimpleClassName(this.getClass().getSimpleName(), getPotionLevel());
     }
 
     @Override
