@@ -10,22 +10,20 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import testMod.potions.LiquidMemoriesUpgradable;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class LiquidMemoriesMaxAction extends AbstractGameAction {
     private final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(LiquidMemoriesUpgradable.POTION_ID);
     public static final String[] TEXT;
-    private AbstractPlayer player;
-    private int numberOfCards;
-    private boolean optional;
-    private int newCost;
-    private boolean setCost;
+    private final AbstractPlayer player;
+    private final int numberOfCards;
+    private final int newCost;
+    private final boolean setCost;
 
     /**
      * Basically the same as a BetterDiscardPileToHandAction, except it upgrades the choices from the discard
-     * pile for the current combat. It also has less options in its constructors, making it less verstile than
+     * pile for the current combat. It also has less options in its constructors, making it less versatile than
      * BetterDiscardPileToHandAction, but work specifically for this max potion.
      * @param numberOfCards Number of cards moving from discard pile to hand. Same as LiquidMemories current potency.
      */
@@ -35,7 +33,6 @@ public class LiquidMemoriesMaxAction extends AbstractGameAction {
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.player = AbstractDungeon.player;
         this.numberOfCards = numberOfCards;
-        this.optional = false;
         this.setCost = true;
     }
 
@@ -43,7 +40,7 @@ public class LiquidMemoriesMaxAction extends AbstractGameAction {
         if (this.duration == this.startDuration) {
             if (!this.player.discardPile.isEmpty() && this.numberOfCards > 0) {
                 if (this.player.discardPile.size() <= this.numberOfCards) {
-                    ArrayList<AbstractCard> cardsToMove = new ArrayList();
+                    ArrayList<AbstractCard> cardsToMove = new ArrayList<>();
                     Iterator var5 = this.player.discardPile.group.iterator();
 
                     AbstractCard c;

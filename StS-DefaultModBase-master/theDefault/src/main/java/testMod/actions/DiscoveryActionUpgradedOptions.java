@@ -9,18 +9,11 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class DiscoveryActionUpgradedOptions  extends AbstractGameAction {
+public class DiscoveryActionUpgradedOptions extends AbstractGameAction {
     private boolean retrieveCard = false;
     private boolean returnColorless = false;
     private AbstractCard.CardType cardType = null;
-
-    public DiscoveryActionUpgradedOptions() {
-        this.actionType = ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_FAST;
-        this.amount = 1;
-    }
 
     /**
      * Basically the same as DiscoveryAction, except the options are upgraded.
@@ -39,6 +32,7 @@ public class DiscoveryActionUpgradedOptions  extends AbstractGameAction {
         this.returnColorless = colorless;
     }
 
+    @SuppressWarnings("IfStatementWithIdenticalBranches")
     public void update() {
         ArrayList<AbstractCard> generatedCards;
         if (this.returnColorless) {
@@ -78,7 +72,6 @@ public class DiscoveryActionUpgradedOptions  extends AbstractGameAction {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         }
 
-                        disCard2 = null;
                     } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
@@ -101,15 +94,13 @@ public class DiscoveryActionUpgradedOptions  extends AbstractGameAction {
     }
 
     private ArrayList<AbstractCard> generateColorlessCardChoices() {
-        ArrayList derp = new ArrayList();
+        ArrayList<AbstractCard> derp = new ArrayList<>();
 
         while(derp.size() != 3) {
             boolean dupe = false;
             AbstractCard tmp = AbstractDungeon.returnTrulyRandomColorlessCardInCombat();
-            Iterator var4 = derp.iterator();
 
-            while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
+            for (AbstractCard c : derp) {
                 if (c.cardID.equals(tmp.cardID)) {
                     dupe = true;
                     break;
@@ -125,21 +116,19 @@ public class DiscoveryActionUpgradedOptions  extends AbstractGameAction {
     }
 
     private ArrayList<AbstractCard> generateCardChoices(AbstractCard.CardType type) {
-        ArrayList derp = new ArrayList();
+        ArrayList<AbstractCard> derp = new ArrayList<>();
 
         while(derp.size() != 3) {
             boolean dupe = false;
-            AbstractCard tmp = null;
+            AbstractCard tmp;
             if (type == null) {
                 tmp = AbstractDungeon.returnTrulyRandomCardInCombat();
             } else {
                 tmp = AbstractDungeon.returnTrulyRandomCardInCombat(type);
             }
 
-            Iterator var5 = derp.iterator();
-
-            while(var5.hasNext()) {
-                AbstractCard c = (AbstractCard)var5.next();
+            for (Object o : derp) {
+                AbstractCard c = (AbstractCard) o;
                 if (c.cardID.equals(tmp.cardID)) {
                     dupe = true;
                     break;
